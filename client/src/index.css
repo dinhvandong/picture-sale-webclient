@@ -6,6 +6,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.sacramento-regular {
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.signature-text {
+  font-family: 'cursive';
+  font-size: 24px;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width: fit-content;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

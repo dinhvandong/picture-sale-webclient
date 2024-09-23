@@ -13,8 +13,11 @@ module.exports = {
         base_color:'#2F4842',
         brown_color:'#B77855',
         bg_color:'#110A04',
-        header_color:'#EEA048'
-
+        header_color:'#EEA048',
+       
+      },
+      fontFamily: {
+        'sacramento': ['Sacramento', 'cursive'],
       },
     },
   },
