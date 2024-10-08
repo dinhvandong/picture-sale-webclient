@@ -5,6 +5,7 @@ import ImageSlider from '../components/ImageSlider'
 import imagesData from './images.json'; // Import your JSON image data
 import Intro from '../components/Intro';
 import Topic from '../components/Topic';
+import ArtistCollection from '../components/ArtistCollection';
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
         <ImageSlider imageData={imagesData} />
         <Intro/>
         <Topic/>
+        <ArtistCollection/>
 
 
     </div>
