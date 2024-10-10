@@ -1,7 +1,8 @@
 import React from 'react'
 import ArtistItem from './ArtistItem';
+import VietnamPatingItem from './VietnamPatingItem';
 
-const ArtistCollection = () => {
+const VietnamPaitingCollection = () => {
 
     // Sample Data
 const items = [
@@ -20,7 +21,8 @@ const items = [
             <div className='flex flex-row items-center w-full h-auto'>
                 <div className='w-[40%] h-[1px] ml-5 bg-white'>
                 </div>
-                <p className='text-center text-white font-bold ml-5 mr-5 text-[40px]'>EXPLORING THE EXQUISITE ARTIST COLLECTION
+                <p className='text-center text-white font-bold ml-5 mr-5 text-[40px]'>VIETNAMESE PAITINGS BY SUBJECTS
+
                 </p>
                 <div className='w-[40%] h-[1px] mr-5 bg-white'>
 
@@ -30,21 +32,19 @@ const items = [
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {items.map(item => (
-                        <ArtistItem key={item.id} title={item.title} image={item.image} />
+                        <VietnamPatingItem key={item.id} title={item.title} image={item.image} />
                     ))}
                 </div>
 
-
-            </div>
-
-            <div className='flex items-center justify-center w-full mt-5'>
+                <div className='flex items-center justify-center w-full mt-5'>
                     <div className='flex  w-[200px] items-center justify-center px-5 py-3 bg-brown_color'>
                         <p className='font-bold text-white'>Full Collection</p>
 
                     </div>
                 </div>
+            </div>
         </div>
     )
 }
 
-export default ArtistCollection
+export default VietnamPaitingCollection

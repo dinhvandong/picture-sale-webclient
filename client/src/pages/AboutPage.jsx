@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Header from '../components/Header'
 import Menu from '../components/Menu'
@@ -11,23 +12,25 @@ import VietnamPaitingCollection from '../components/VietnamPaitingCollection';
 import CustomerFeedback from '../components/CustomerFeedback';
 import BlogCollection from '../components/BlogCollection';
 import Footer from '../components/Footer';
+import { AboutBody } from '../components/AboutBody';
 
-const HomePage = () => {
+const AboutPage = () => {
   return (
     <div className='flex flex-col h-auto w-screen bg-white'>
         <Header/>
         <Menu/>
         <ImageSlider imageData={imagesData} />
-        <Intro/>
+        {/* <Intro/>
         <Topic/>
         <ArtistCollection/>
         <NewCollection/>
         <VietnamPaitingCollection/>
         <CustomerFeedback/>
-        <BlogCollection/>
+        <BlogCollection/> */}
+        <AboutBody/>
         <Footer/>
     </div>
   )
 }
 
-export default HomePage
+export default AboutPage

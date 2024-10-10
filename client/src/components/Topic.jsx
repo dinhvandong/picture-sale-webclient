@@ -52,7 +52,7 @@ const Topic = () => {
                     🎨 Don’t miss this special chance to dive into an emotional artistic experience and discover an essential part of Hanoi through the artistic perspective of Phạm Hoàng Minh. Nguyen Art Gallery warmly welcomes you!
                 </p>
                 <div className='flex items-center justify-center w-full mt-5'>
-                    <div className='flex  w-[200px] items-center justify-center px-5 py-3 bg-yellow-600'>
+                    <div className='flex  w-[200px] items-center justify-center px-5 py-3 bg-brown_color'>
                         <p className='font-bold text-white'>Full Collection</p>
 
                     </div>
