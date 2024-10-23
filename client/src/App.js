@@ -3,6 +3,8 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import GalleryTourPage from './pages/GalleryTourPage';
+import ArtistVnPage from './pages/ArtistVnPage';
+import PaintingDetailPage from './pages/PaintingDetailPage';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/gallery-tour" element={<GalleryTourPage />} />
+        <Route path="/artist-vn" element={<ArtistVnPage />} />
+        <Route path="/paiting-detail" element={<PaintingDetailPage />} />
 
         {/* <Route path="/sign-in" element={<SignInPage />} />
         <Route path="/confirm-code/:path" element={<ConfirmRegisterCodePage />} />

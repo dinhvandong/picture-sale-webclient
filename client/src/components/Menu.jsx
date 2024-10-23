@@ -14,11 +14,19 @@ const Menu = () => {
         navigate('/gallery-tour')
 
     }
+
+    const gotoHomePage = () =>{
+        navigate('/');
+    }
+
+    const gotoArtistVnPage = ()=>{
+        navigate('/artist-vn')
+    }
     return (
         <div className='bg-header_color w-full h-[60px] flex flex-row justify-center items-center'>
 
 
-            <div className=' flex items-center text-black hover:text-white hover:bg-brown_color ml-5 px-3 py-2 h-full hover:cursor-pointer'>
+            <div onClick={gotoHomePage} className=' flex items-center text-black hover:text-white hover:bg-brown_color ml-5 px-3 py-2 h-full hover:cursor-pointer'>
                 <p className='font-bold '>Home</p>
 
             </div>
@@ -28,7 +36,7 @@ const Menu = () => {
 
             </div>
 
-            <div className=' flex items-center text-black hover:text-white hover:bg-brown_color ml-5 px-3 py-2 h-full hover:cursor-pointer'>
+            <div onClick={gotoArtistVnPage} className=' flex items-center text-black hover:text-white hover:bg-brown_color ml-5 px-3 py-2 h-full hover:cursor-pointer'>
                 <p className='font-bold '>Artists</p>
 
             </div>
