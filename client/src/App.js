@@ -10,6 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        
         {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
