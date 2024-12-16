@@ -5,7 +5,7 @@ import AboutPage from './pages/AboutPage';
 import GalleryTourPage from './pages/GalleryTourPage';
 import ArtistVnPage from './pages/ArtistVnPage';
 import PaintingDetailPage from './pages/PaintingDetailPage';
-import PaitingPage from './pages/PaitingPage';
+// import PaitingPage from './pages/PaintingPage';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
 
         <Route path="/gallery-tour" element={<GalleryTourPage />} />
         <Route path="/artist-vn" element={<ArtistVnPage />} />
-        <Route path="/paiting-detail" element={<PaintingDetailPage />} />
+        {/* <Route path="/paiting-detail" element={<PaintingDetailPage />} /> */}
         
 
         {/* <Route path="/sign-in" element={<SignInPage />} />
