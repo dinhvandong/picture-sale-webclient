@@ -21,7 +21,7 @@ const ImageSlider = ({ imageData }) => {
           <img
            className='w-full'
             key={image.id}
-            src={image.url}
+            src={image.thumb}
             alt={`Image ${image.id}`}
             style={{
               display: index === currentIndex ? 'inline-block' : 'none',

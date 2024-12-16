@@ -6,7 +6,6 @@ import GalleryTourPage from './pages/GalleryTourPage';
 import ArtistVnPage from './pages/ArtistVnPage';
 import PaintingDetailPage from './pages/PaintingDetailPage';
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +16,7 @@ function App() {
         <Route path="/gallery-tour" element={<GalleryTourPage />} />
         <Route path="/artist-vn" element={<ArtistVnPage />} />
         <Route path="/paiting-detail" element={<PaintingDetailPage />} />
+        
 
         {/* <Route path="/sign-in" element={<SignInPage />} />
         <Route path="/confirm-code/:path" element={<ConfirmRegisterCodePage />} />
