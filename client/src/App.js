@@ -4,12 +4,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import GalleryTourPage from './pages/GalleryTourPage';
 import ArtistVnPage from './pages/ArtistVnPage';
-import PaintingDetailPage from './pages/PaintingDetailPage';
-<<<<<<< Updated upstream
 // import PaitingPage from './pages/PaintingPage';
-=======
-// import PaintingPage from './pages/PaintingPage';
->>>>>>> Stashed changes
 
 function App() {
   return (
@@ -18,7 +13,6 @@ function App() {
         {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/paiting" element={<PaitingPage />} />
 
         <Route path="/gallery-tour" element={<GalleryTourPage />} />
         <Route path="/artist-vn" element={<ArtistVnPage />} />
