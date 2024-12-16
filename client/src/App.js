@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage';
 import GalleryTourPage from './pages/GalleryTourPage';
 import ArtistVnPage from './pages/ArtistVnPage';
 import PaintingDetailPage from './pages/PaintingDetailPage';
+import PaitingPage from './pages/PaitingPage';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/paiting" element={<PaitingPage />} />
+
         <Route path="/gallery-tour" element={<GalleryTourPage />} />
         <Route path="/artist-vn" element={<ArtistVnPage />} />
         <Route path="/paiting-detail" element={<PaintingDetailPage />} />
