@@ -5,7 +5,11 @@ import AboutPage from './pages/AboutPage';
 import GalleryTourPage from './pages/GalleryTourPage';
 import ArtistVnPage from './pages/ArtistVnPage';
 import PaintingDetailPage from './pages/PaintingDetailPage';
+<<<<<<< Updated upstream
 // import PaitingPage from './pages/PaintingPage';
+=======
+// import PaintingPage from './pages/PaintingPage';
+>>>>>>> Stashed changes
 
 function App() {
   return (

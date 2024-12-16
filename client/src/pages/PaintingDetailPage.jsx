@@ -7,7 +7,7 @@ import PaitingDetail from '../components/PaitingDetail';
 
 const PaintingDetailPage = () => {
   return (
-    <div className='flex flex-col h-auto w-screen bg-white'>
+    <div className='flex flex-col w-screen h-auto bg-white'>
         <Header/>
         <Menu/>
         <PaitingDetail/>
