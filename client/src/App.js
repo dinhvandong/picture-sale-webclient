@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import GalleryTourPage from './pages/GalleryTourPage';
 import ArtistVnPage from './pages/ArtistVnPage';
+import HuyTqPage from './pages/HuyTqPage';
 // import PaitingPage from './pages/PaintingPage';
 import Toanjr from './components/toannv/Test';
 
@@ -11,13 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        
-        {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
-        <Route path="/" element={<Toanjr/>} />
-        <Route path="/about" element={<AboutPage />} />
 
-        <Route path="/gallery-tour" element={<GalleryTourPage />} />
-        <Route path="/artist-vn" element={<ArtistVnPage />} />
       </Routes>
     </BrowserRouter>
   );
