@@ -15,8 +15,21 @@ const Menu = () => {
 
     }
 
+    const gotoLacquerArtwork = ()=>{
+        navigate('/artist-vn/artist-lacquer-artwork')
+    }
+
+    const gotoPaitingPage = () =>{
+        navigate('/artwork/landscape-paintings');
+    }
+
     const gotoHomePage = () =>{
         navigate('/');
+    }
+    const gotoSpecialArtCollection  = () =>{
+
+        navigate('/');
+
     }
 
     const gotoArtistVnPage = ()=>{
@@ -31,7 +44,7 @@ const Menu = () => {
 
             </div>
 
-            <div className=' flex items-center text-black hover:text-white hover:bg-brown_color ml-5 px-3 py-2 h-full hover:cursor-pointer'>
+            <div onClick={gotoPaitingPage} className=' flex items-center text-black hover:text-white hover:bg-brown_color ml-5 px-3 py-2 h-full hover:cursor-pointer'>
                 <p className='font-bold '>Paintings</p>
 
             </div>
@@ -41,12 +54,12 @@ const Menu = () => {
 
             </div>
 
-            <div className=' flex items-center text-black hover:text-white hover:bg-brown_color ml-5 px-3 py-2 h-full hover:cursor-pointer'>
+            <div onClick={gotoLacquerArtwork} className=' flex items-center text-black hover:text-white hover:bg-brown_color ml-5 px-3 py-2 h-full hover:cursor-pointer'>
                 <p className='font-bold '>Lacquer ArtWorks</p>
 
             </div>
 
-            <div className=' flex items-center text-black hover:text-white hover:bg-brown_color ml-5 px-3 py-2 h-full hover:cursor-pointer'>
+            <div onClick={gotoSpecialArtCollection} className=' flex items-center text-black hover:text-white hover:bg-brown_color ml-5 px-3 py-2 h-full hover:cursor-pointer'>
                 <p className='font-bold '>Special Art Collections</p>
 
             </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Toan from './toan.json';
 
 
-const Test = () => {
+const ToanTest = () => {
   return (
     <div className='flex flex-col w-full h-max'>
       <div className='w-full h-[800px] bg-cover bg-[url(https://www.nguyenartgallery.com/wp-content/uploads/Vietnamese-Paintings-Artists-1-2048x1024.jpg)]'></div>
@@ -108,4 +108,4 @@ const Test = () => {
   )
 }
 
-export default Test
+export default ToanTest

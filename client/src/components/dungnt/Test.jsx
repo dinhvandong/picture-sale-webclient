@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
-const Test = () => {
+const DungTest = () => {
   const images = [
     "https://www.nguyenartgallery.com/wp-content/uploads/gallery-5.jpg",
     "https://www.nguyenartgallery.com/wp-content/uploads/gallery-4.jpg",
@@ -197,4 +197,4 @@ const Test = () => {
   )
 }
 
-export default Test
+export default DungTest

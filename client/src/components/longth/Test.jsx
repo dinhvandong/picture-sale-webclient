@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Test = () => {
+const LongTest = () => {
   return (
-    <div className='flex flex-col w-full h-screen bg-yellow-300'>
+    <div className='flex flex-col w-full h-auto bg-yellow-300'>
       <div className='flex flex-col justify-center items-center bg-[#27242E] w-full h-[200px]'>
         <div className='flex items-center justify-center'>
           <p className='text-[#FFEF96] text-[35px] font-bold cursor-pointer'>Artist Nguyen Tan Phat - Vietnamese Lacquer Artwork</p>
@@ -3138,4 +3138,4 @@ const Test = () => {
   )
 }
 
-export default Test
+export default LongTest

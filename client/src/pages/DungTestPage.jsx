@@ -17,15 +17,14 @@ import GalleryTour from '../components/GalleryTour';
 import ArtistVn from '../components/ArtistVn';
 import Huy from '../components/huytq/Huy';
 import DungTest from '../components/dungnt/Test';
-import LongTest from '../components/longth/Test';
 
-const LacquerArtworkPage = () => {
+const DungTestPage = () => {
   return (
     <div className='flex flex-col h-auto w-screen bg-white'>
         <Header/>
         <Menu/>
         {/* <ImageSlider imageData={imagesData} /> */}
-        <LongTest/>
+        <DungTest/>
         <Footer/>
     </div>
   )
@@ -33,5 +32,4 @@ const LacquerArtworkPage = () => {
 
 
 
-
-export default LacquerArtworkPage
+export default DungTestPage
