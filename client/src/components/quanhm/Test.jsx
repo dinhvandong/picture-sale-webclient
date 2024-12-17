@@ -1,7 +1,7 @@
 import React from 'react'
 import ArtistVnItem from './ArtistVnItem';
 
-const Quan = () => {
+const Test = () => {
 
   // Sample Data
   const items = [
