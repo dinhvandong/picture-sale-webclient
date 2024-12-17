@@ -6,7 +6,7 @@ import ImageSlider from '../components/ImageSlider'
 import imagesData from './images.json'; // Import your JSON image data
 import Intro from '../components/Intro';
 import Topic from '../components/Topic';
-import ArtistCollection from '../components/ArtistCollection';
+import ArtistCollection from '../components/quanhm/ArtistCollection';
 import NewCollection from '../components/NewCollection';
 import VietnamPaitingCollection from '../components/VietnamPaitingCollection';
 import CustomerFeedback from '../components/CustomerFeedback';

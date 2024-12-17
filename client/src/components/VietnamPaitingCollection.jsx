@@ -1,5 +1,5 @@
 import React from 'react'
-import ArtistItem from './ArtistItem';
+import ArtistItem from './quanhm/ArtistItem';
 import VietnamPatingItem from './VietnamPatingItem';
 
 const VietnamPaitingCollection = () => {

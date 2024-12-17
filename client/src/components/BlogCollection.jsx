@@ -1,5 +1,5 @@
 import React from 'react'
-import ArtistItem from './ArtistItem';
+import ArtistItem from './quanhm/ArtistItem';
 import BlogCollectionItem from './BlogCollectionItem';
 
 const BlogCollection = () => {
