@@ -1,0 +1,8 @@
+[
+    { "id": 1, "imageUrl": "https://www.nguyenartgallery.com/wp-content/uploads/gallery-5.jpg", "alt": "Gallery Item 1" },
+    { "id": 2, "imageUrl": "https://www.nguyenartgallery.com/wp-content/uploads/gallery-4.jpg", "alt": "Gallery Item 2" },
+    { "id": 3, "imageUrl": "https://www.nguyenartgallery.com/wp-content/uploads/gallery-3.jpg", "alt": "Gallery Item 3" },
+    { "id": 4, "imageUrl": "https://www.nguyenartgallery.com/wp-content/uploads/gallery-6.jpg", "alt": "Gallery Item 4" },
+    { "id": 5, "imageUrl": "https://www.nguyenartgallery.com/wp-content/uploads/gallery-2.jpg", "alt": "Gallery Item 5" }
+  ]
+  

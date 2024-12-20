@@ -1,31 +1,23 @@
 
-import React, { useState } from "react";
-import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import React, { useRef } from "react";
+import galleryData from "./images.json";
+import SlidingGrid from "./SlidingGrid";
 
 const DungTest = () => {
-  const images = [
-    "https://www.nguyenartgallery.com/wp-content/uploads/gallery-5.jpg",
-    "https://www.nguyenartgallery.com/wp-content/uploads/gallery-4.jpg",
-    "https://www.nguyenartgallery.com/wp-content/uploads/gallery-3.jpg",
-    "https://www.nguyenartgallery.com/wp-content/uploads/gallery-6.jpg",
-    "https://www.nguyenartgallery.com/wp-content/uploads/gallery-2.jpg",
-  ];
+  const gridRef = useRef(null); // Reference to the grid container
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const goToPrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+  const handleScroll = (direction) => {
+    const scrollAmount = gridRef.current.clientWidth; // Scroll one full column width
+    if (direction === "next") {
+      gridRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    } else if (direction === "prev") {
+      gridRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    }
   };
 
   return (
     <div className='w-full h-full bg-[#27242e]'>
-      <div className='flex flex-row h-full'>
+      <div className='flex flex-row h-auto'>
         <div class="w-[1/2] ">
           <img
             src="https://www.nguyenartgallery.com/wp-content/uploads/chat-with-our-art-collector-bg.jpg"
@@ -56,7 +48,7 @@ const DungTest = () => {
         <p className='text-lg text-white'>development of Vietnamese modern art; also various stories about many Vietnamese artists with their lives, works and how they keep on their passion in the up and down</p>
         <p className='text-lg text-white'>of Vietnamese history in 20th Century. Enjoying Vietnamese coffee or tea, chatting with him at Art Space is your most memorial time in Hanoi.</p>
       </div>
-      <div class="flex flex-row ml-10 items-start h-full">
+      <div class="flex flex-row ml-10 items-start h-auto">
         <div class="w-[40%] flex flex-col">
           <h2 class="text-2xl font-bold mb-4 text-[#d1cc86] mt-24 ">What Makes This Experience Different?</h2>
           <ul class="list-disc pl-5 space-y-3">
@@ -124,26 +116,9 @@ const DungTest = () => {
           <li className='text-lg text-white'>Shipping the artwork worldwide.</li>
         </ul>
       </div>
-      <div className="flex items-center justify-center h-auto bg-[#27242e] mt-14">
-        <div className="relative w-[70%] h-auto bg-[#27242e] flex flex-col items-center justify-center">
-          <img
-            src={images[currentIndex]}
-            className="object-cover w-full h-full rounded-lg"
-          />
-          <button
-            onClick={goToPrev}
-            className="absolute p-3 text-white transform -translate-y-1/2 rounded-full left-5 top-1/2 bg-gray-700/50 hover:bg-gray-600/80"
-          >
-            <MdArrowBack size={30} />
-          </button>
-          <button
-            onClick={goToNext}
-            className="absolute p-3 text-white transform -translate-y-1/2 rounded-full right-5 top-1/2 bg-gray-700/50 hover:bg-gray-600/80"
-          >
-            <MdArrowForward size={30} />
-          </button>
+      <div className="relative w-full mx-auto ">
+        <SlidingGrid/>
         </div>
-      </div>
       <div className="w-full h-1 underline bg-white mt-14"></div>
       <div className="ml-10">
         <h2 class="text-2xl font-bold text-[#d1cc86] mt-10">Full Itinerary</h2>
@@ -181,18 +156,18 @@ const DungTest = () => {
         </div>
       </div>
       <div className="flex flex-col mt-10 ml-10">
-      <h2 class="text-2xl font-bold text-[#d1cc86] mt-10">Leave Us Your Inquiry</h2>
-      <p className="mt-5 text-lg font-bold text-white">Contact Us</p>
-      <p className="mt-5 text-lg text-white"> Fields marked with an <span className="text-red-500">*</span> are required</p>
-      <p className="text-lg "><span className="text-[#d1cc86] font-bold">Your Name</span><span className="text-red-500"> *</span></p>
-      <input type="text" className=" w-[90%] mt-3 h-10" />
-      <p className="mt-10 text-lg "><span className="text-[#d1cc86] font-bold">Your Email</span><span className="text-red-500"> *</span></p>
-      <input type="text" className=" w-[90%] mt-3 h-10" />
-      <p className="mt-10 text-lg "><span className="text-[#d1cc86] font-bold">Your Message</span><span className="text-red-500"> *</span></p>
-      <input type="text" className=" w-[90%] mt-3 h-52" />
-      <p className="mt-10 text-lg font-bold text-white">SEND</p>
+        <h2 class="text-2xl font-bold text-[#d1cc86] mt-10">Leave Us Your Inquiry</h2>
+        <p className="mt-5 text-lg font-bold text-white">Contact Us</p>
+        <p className="mt-5 text-lg text-white"> Fields marked with an <span className="text-red-500">*</span> are required</p>
+        <p className="text-lg "><span className="text-[#d1cc86] font-bold">Your Name</span><span className="text-red-500"> *</span></p>
+        <input type="text" className=" w-[90%] mt-3 h-10" />
+        <p className="mt-10 text-lg "><span className="text-[#d1cc86] font-bold">Your Email</span><span className="text-red-500"> *</span></p>
+        <input type="text" className=" w-[90%] mt-3 h-10" />
+        <p className="mt-10 text-lg "><span className="text-[#d1cc86] font-bold">Your Message</span><span className="text-red-500"> *</span></p>
+        <input type="text" className=" w-[90%] mt-3 h-52" />
+        <p className="mt-10 text-lg font-bold text-white">SEND</p>
       </div>
-    </div>
+    </div >
 
   )
 }
