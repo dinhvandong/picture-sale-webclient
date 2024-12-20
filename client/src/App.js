@@ -11,6 +11,7 @@ import LacquerArtworkPage from './pages/LacquerArtwork';
 import PaintingDetailPage from './pages/PaintingDetailPage';
 import { useEffect } from 'react';
 import { LanguageProvider } from './LanguageContext'; // Import LanguageProvider
+import DungTest from './components/dungnt/Test';
 
 function App() {
   // useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/hai-long" element={<HomePage />} />
+          <Route path="/dungcc" element={<DungTest />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/gallery-tour" element={<GalleryTourPage />} />
