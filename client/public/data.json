@@ -1,0 +1,652 @@
+[
+    {
+      "id": 1,
+      "artwork": "24 ARTWORKS",
+      "title": "AN DANG",
+      "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-an-dang.jpg"
+    },
+    {
+      "id": 2,
+      "artwork": "1 ARTWORKS",
+      "title": "BUI QUANG LUONG",
+      "image": "https://www.nguyenartgallery.com/wp-content/uploads/bui-quang-luong-artist.jpg"
+    },
+    {
+      "id": 3,
+      "artwork": "27 ARTWORKS",
+      "title": "CHAU AI VAN",
+      "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-chau-ai-van.jpg"
+    },
+    {
+        "id": 4,
+        "artwork": "32 ARTWORKS",
+        "title": "CHI NGUYEN",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/chi-nguyen-famous-artist-in-vietnam.jpg"
+      },
+      {
+        "id": 5,
+        "artwork": "10 ARTWORKS",
+        "title": "CHU VIET CUONG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-chu-viet-cuong-1.jpg"
+      },
+      {
+        "id": 6,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/H%E1%BB%8Da-S%C4%A9-%C4%90%E1%BA%B7ng-%C4%90%C3%ACnh-Ng%E1%BB%A1-2.jpg"
+      },
+      {
+        "id": 7,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-dang-hien-1.jpg"
+      },
+      {
+        "id": 8,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-dang-hiep.jpg"
+      },
+      {
+        "id": 9,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/dang-huy-quyen-vietnamese-artists.jpg"
+      },
+      {
+        "id": 10,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-dang-vu-ha-1.jpg"
+      },
+      {
+        "id": 11,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/danh-cuong-famous-vietnamese-painters.jpg"
+      },
+      {
+        "id": 12,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-dao-anh-khanh.jpg"
+      },
+      {
+        "id": 13,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Dau-Quang-Anh-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 14,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/dau-quang-toan.jpg"
+      },
+      {
+        "id": 15,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-dinh-dong.jpg"
+      },
+      {
+        "id": 16,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+      },
+      {
+        "id": 17,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Dinh-Thi-Thanh-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 18,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/do-cong-son-vietnamese-artist.jpg"
+      },
+      {
+        "id": 19,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-do-khai.jpg"
+      },
+      {
+        "id": 20,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-do-van-hiep.jpg"
+      },
+      {
+        "id": 21,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Doan-Xuan-Tung-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 22,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+      },
+      {
+        "id": 23,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/duy-hoa-vietnam-painting.jpg"
+      },
+      {
+        "id": 24,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-giap-van-tuan.jpg"
+      },
+      {
+        "id": 25,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/hai-linh-artist.jpg"
+      },
+      {
+        "id": 26,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/henry-le-famous-vietnamese-artist.jpg"
+      },
+      {
+        "id": 27,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Hoang-A-Sang-Nguyen-Art-Gallery-1.jpg"
+      },
+      {
+        "id": 28,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Hoang-Dang-Khoa-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 29,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+      },
+      {
+        "id": 30,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Hoang-Ngoc-Dung-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 31,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/vietnamese-artist-ht-phuc.jpg"
+      },
+      {
+        "id": 32,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/khong-do-duy-artist.jpg"
+      },
+      {
+        "id": 33,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Kieu-Tri.png"
+      },
+      {
+        "id": 34,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-lam-duc-manh.jpg"
+      },
+      {
+        "id": 35,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Lam-Xung-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 36,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Le-Duc-Tung.jpg"
+      },
+      {
+        "id": 37,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/le-huong-paintings.jpg"
+      },
+      {
+        "id": 38,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Le-Khanh-Hieu-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 39,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/le-kuan.jpg"
+      },
+      {
+        "id": 40,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Le-Ngoc-Ly-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 41,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/le-nguyen-manh-vietnam-art.jpg"
+      },
+      {
+        "id": 42,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Le-Van-Hoan-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 43,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/le-xuan-hung-linh-hanoi-art-gallery.jpg"
+      },
+      {
+        "id": 44,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-luong-duy.jpg"
+      },
+      {
+        "id": 45,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-luong-trung.jpg"
+      },
+      {
+        "id": 46,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/luu-tuyen-top-vietnamese-artists.jpg"
+      },
+      {
+        "id": 47,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-mai-huy-dung-1.jpg"
+      },
+      {
+        "id": 48,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Le-Thi-Kim-Uyen-Nguyen-Art-Gallery-e1722935240562.jpg"
+      },
+      {
+        "id": 49,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-minh-chinh-1.jpg"
+      },
+      {
+        "id": 50,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+      },
+      {
+        "id": 51,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Nam-Thanh-Trung-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 52,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-ngo-ba-cong.jpg"
+      },
+      {
+        "id": 53,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Ngo-Duc-Hoang-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 54,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/ngo-tuan-anh-vietnam-artists.jpg"
+      },
+      {
+        "id": 55,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Nguyen-Anh-Tuan-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 56,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-anh-tuan-painter-vietnamese-artist.jpg"
+      },
+      {
+        "id": 57,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-binh-son.jpg"
+      },
+      {
+        "id": 58,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-cuong-famous-artist-in-vietnam.jpg"
+      },
+      {
+        "id": 59,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-dinh-duy-quyen.jpg"
+      },
+      {
+        "id": 60,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Nguyen-Lam-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 61,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-duc-huy.jpg"
+      },
+      {
+        "id": 62,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-hong-giang.jpg"
+      },
+      {
+        "id": 63,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Nguyen-Huynh-Mai-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 64,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Nguyen-Khac-Chinh.jpg"
+      },
+      {
+        "id": 65,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-lam.jpg"
+      },
+      {
+        "id": 66,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-minh-hai-artist.jpg"
+      },
+      {
+        "id": 67,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-phan-bach-artist.jpg"
+      },
+      {
+        "id": 68,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Hoa-Si-Nguyen-Phuong-Tranh-Mau-Nuoc.jpg"
+      },
+      {
+        "id": 69,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-quang-vinh-vietnamese-artists.jpg"
+      },
+      {
+        "id": 70,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-quy-tam.jpg"
+      },
+      {
+        "id": 71,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Nguyen-Sy-Hieu-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 72,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-tan-phat.jpg"
+      },
+      {
+        "id": 73,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-thanh-chung.jpg"
+      },
+      {
+        "id": 74,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-the-hung-famous-vietnamese-painters.jpg"
+      },
+      {
+        "id": 75,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-thu-thuy.jpg"
+      },
+      {
+        "id": 76,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-tran-cuong-famous-vietnamese-paintings.jpg"
+      },
+      {
+        "id": 77,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-tu-quyen.jpg"
+      },
+      {
+        "id": 78,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-tuan-anh-artist.jpg"
+      },
+      {
+        "id": 79,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-tuan-cuong-artist.jpg"
+      },
+      {
+        "id": 80,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-van-ho-vietnamese-artist.jpg"
+      },
+      {
+        "id": 81,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Nguyen-Van-Nghia-Nguyen-Art-Gallery-e1722937594655.jpg"
+      },
+      {
+        "id": 82,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-nguyen-xuan-viet.jpg"
+      },
+      {
+        "id": 83,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/pham-hoang-minh-artist.jpg"
+      },
+      {
+        "id": 84,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/pham-minh-duc-vietnam-painting-.jpg"
+      },
+      {
+        "id": 85,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/nguyen-thai-binh-famous-vietnamese-artist.jpg"
+      },
+      {
+        "id": 86,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/pham-tuan-tu-vietnamese-artwork.gif"
+      },
+      {
+        "id": 87,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-phan-niem.jpg"
+      },
+      {
+        "id": 88,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+      },
+      {
+        "id": 89,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/printed-vietnamese-painters.jpg"
+      },
+      {
+        "id": 90,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/woocommerce-placeholder-300x300.png"
+      },
+      {
+        "id": 91,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/ton-that-minh-nhat-artist.jpg"
+      },
+      {
+        "id": 92,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-tran-dan-1.jpg"
+      },
+      {
+        "id": 93,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/tran-lang-paintings.jpg"
+      },
+      {
+        "id": 94,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-tran-nam.jpg"
+      },
+      {
+        "id": 95,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-tran-ngoc-bay.jpg"
+      },
+      {
+        "id": 96,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Tran-Thieu-Nam-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 97,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-tran-tien-thanh.jpg"
+      },
+      {
+        "id": 98,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/tran-trung-thanh-hanoi-art-gallery.jpg"
+      },
+      {
+        "id": 99,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Tran-Viet-Thuc-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 100,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/trieu-khac-tien-vietnamese-artist-painting.jpg"
+      },
+      {
+        "id": 101,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-trinh-que-anh.jpg"
+      },
+      {
+        "id": 102,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Trinh-Vu-Hieu-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 103,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Truong-Thien.png"
+      },
+      {
+        "id": 104,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/artist-truong-trong-quyen.jpg"
+      },
+      {
+        "id": 105,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Uncategorized.png"
+      },
+      {
+        "id": 106,
+        "artwork": "24 ARTWORKS",
+        "title": "AN DANG",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/van-chien-vietnamese-artists-painters.jpg"
+      },
+      {
+        "id": 107,
+        "artwork": "30 ARTWORKS",
+        "title": "PHAM HUY",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/Artist-Viet-Huong-Nguyen-Art-Gallery.jpg"
+      },
+      {
+        "id": 3108,
+        "artwork": "15 ARTWORKS",
+        "title": "NGUYEN THAO",
+        "image": "https://www.nguyenartgallery.com/wp-content/uploads/young-lady.jpg"
+      }
+     
+  ]
+  
