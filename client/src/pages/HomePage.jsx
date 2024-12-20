@@ -32,11 +32,11 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className='flex flex-col h-auto w-screen bg-white'>
+    <div className="flex flex-col h-auto w-screen bg-white pt-[120px]"> {/* Adjust padding to account for both Header and Menu */}
       <Header />
       <Menu />
       <ImageSlider imageData={headerData?.pictureArtList || []} />
-      <Intro desc= {headerData?.desc || ''} title={headerData?.title || ''} />
+      <Intro desc={headerData?.desc || ''} title={headerData?.title || ''} />
       <Topic />
       <ArtistCollection />
       <NewCollection />

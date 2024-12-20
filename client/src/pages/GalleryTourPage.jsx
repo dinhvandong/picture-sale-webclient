@@ -15,6 +15,7 @@ import Footer from '../components/Footer';
 import { AboutBody } from '../components/AboutBody';
 import GalleryTour from '../components/GalleryTour';
 
+// Dung 
 const GalleryTourPage = () => {
   return (
     <div className='flex flex-col h-auto w-screen bg-white'>

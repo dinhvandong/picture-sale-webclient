@@ -16,22 +16,18 @@ import { AboutBody } from '../components/AboutBody';
 import GalleryTour from '../components/GalleryTour';
 import ArtistVn from '../components/ArtistVn';
 import Huy from '../components/huytq/Huy';
-import DungTest from '../components/dungnt/Test';
-import LongTest from '../components/longth/Test';
 
-const LacquerArtworkPage = () => {
+const HuyTqPage = () => {
   return (
     <div className='flex flex-col h-auto w-screen bg-white'>
         <Header/>
         <Menu/>
         {/* <ImageSlider imageData={imagesData} /> */}
-        <LongTest/>
+        <Huy/>
         <Footer/>
     </div>
   )
 }
 
 
-
-
-export default LacquerArtworkPage
+export default HuyTqPage

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import '../index.css';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
+import { LanguageContext } from '../LanguageContext'; // Import the context
 
 const Topic = () => {
+  const { language } = useContext(LanguageContext); // Get the current language from context
   const [data, setData] = useState(null);
 
   // Fetch data from API
@@ -30,7 +31,7 @@ const Topic = () => {
       <div className='flex flex-row items-center w-full h-auto'>
         <div className='w-1/2 h-[1px] ml-5 bg-white'></div>
         <p className='text-center text-white font-bold ml-5 mr-5 text-[40px]'>
-          {data?.topName?.en || "Loading..."}
+          {data?.topName ? data.topName[language] : "Loading..."} {/* Switch text based on language */}
         </p>
         <div className='w-1/2 h-[1px] mr-5 bg-white'></div>
       </div>
@@ -47,7 +48,7 @@ const Topic = () => {
       {/* Description and Button */}
       <div className='flex flex-col w-full'>
         <p className='mt-5 ml-5 text-white'>
-          🎨 {data?.desc?.en || "Loading description..."}
+          🎨 {data?.desc ? data.desc[language] : "Loading description..."} {/* Switch description text based on language */}
         </p>
 
         <div className='flex items-center justify-center w-full mt-5'>

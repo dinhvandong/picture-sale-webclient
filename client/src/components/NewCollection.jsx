@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import NewItem from './NewItem';
+import { LanguageContext } from '../LanguageContext'; // Import LanguageContext
 
 const NewCollection = () => {
+  const { language } = useContext(LanguageContext); // Get current language from context
   const [items, setItems] = useState([]); // State to store fetched items
   const [loading, setLoading] = useState(true); // State for loading
   const [error, setError] = useState(null); // State for error handling
@@ -48,7 +50,7 @@ const NewCollection = () => {
           {items.map((item) => (
             <NewItem
               key={item.id}
-              title={item.name.en} // Display English name
+              title={item.name[language]} // Display title based on current language
               image={item.thumb} // Display thumbnail
             />
           ))}
