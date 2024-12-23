@@ -10,7 +10,8 @@ import DungTestPage from './pages/DungTestPage';
 import LacquerArtworkPage from './pages/LacquerArtwork';
 import PaintingDetailPage from './pages/PaintingDetailPage';
 import { useEffect } from 'react';
-import { LanguageProvider } from './LanguageContext'; // Import LanguageProvider
+import { LanguageProvider } from './LanguageContext';
+import Toan2 from './components/toan2/Toan2'; // Import LanguageProvider
 
 function App() {
   // useEffect(() => {
@@ -24,7 +25,7 @@ function App() {
     <LanguageProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/hai-long" element={<HomePage />} />
+          <Route path="/" element={<HomePage/>} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/gallery-tour" element={<GalleryTourPage />} />
