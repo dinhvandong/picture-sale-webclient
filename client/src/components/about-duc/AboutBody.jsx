@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GalleryPage = () => {
+const AboutBody = () => {
   return (
     <div className="flex flex-col h-auto w-screen bg-[#27242E]">
       {/* Menu Bar */}
@@ -269,4 +269,5 @@ Private Policy</footer>
   );
 };
 
-export default GalleryPage;
+
+export default AboutBody
