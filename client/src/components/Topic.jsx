@@ -1,21 +1,39 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { LanguageContext } from '../LanguageContext'; // Import the context
+import { findPictureTopicByKey } from '../services/api_header';
 
 const Topic = () => {
   const { language } = useContext(LanguageContext); // Get the current language from context
   const [data, setData] = useState(null);
 
-  // Fetch data from API
+  // // Fetch data from API
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get("http://localhost:8081/api/topic-art-settings/1"); // Replace with your API URL
+  //       setData(response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
+  // Fetch data from the API
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8081/api/topic-art-settings/1"); // Replace with your API URL
-        setData(response.data);
+        const response = await findPictureTopicByKey('header-collection-special');
+        if(response.success == 200){
+
+          console.log('response:', response.data);
+          setData(response.data);
+        }
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       }
     };
+
     fetchData();
   }, []);
 
@@ -31,7 +49,7 @@ const Topic = () => {
       <div className='flex flex-row items-center w-full h-auto'>
         <div className='w-1/2 h-[1px] ml-5 bg-white'></div>
         <p className='text-center text-white font-bold ml-5 mr-5 text-[40px]'>
-          {data?.topName ? data.topName[language] : "Loading..."} {/* Switch text based on language */}
+          {data?.name ? data.name[language] : "Loading..."} {/* Switch text based on language */}
         </p>
         <div className='w-1/2 h-[1px] mr-5 bg-white'></div>
       </div>

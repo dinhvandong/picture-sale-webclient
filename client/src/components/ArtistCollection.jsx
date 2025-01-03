@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import ArtistItem from './ArtistItem';
+import { LanguageContext } from '../LanguageContext';
 
 const ArtistCollection = () => {
   const [artists, setArtists] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { language } = useContext(LanguageContext); // Get the current language from context
 
   // Fetch data from API
   useEffect(() => {
@@ -42,7 +44,7 @@ const ArtistCollection = () => {
             {artists.map((artist) => (
               <ArtistItem
                 key={artist.id}
-                title={artist.name.en} // Pass the English name
+                title={artist.name[language]} // Pass the English name
                 image={artist.avatar} // Pass the avatar URL
               />
             ))}

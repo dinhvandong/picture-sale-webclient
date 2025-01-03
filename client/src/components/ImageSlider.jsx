@@ -20,9 +20,9 @@ const ImageSlider = ({ imageData }) => {
         {imageData.map((image, index) => (
           <img
            className='w-full'
-            key={image.id}
-            src={image.thumb}
-            alt={`Image ${image.id}`}
+            key={image?.id}
+            src={image?.thumb}
+            alt={`Image ${image?.id}`}
             style={{
               display: index === currentIndex ? 'inline-block' : 'none',
             //   maxWidth: '100%',

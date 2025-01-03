@@ -12,6 +12,8 @@ import CustomerFeedback from '../components/CustomerFeedback';
 import BlogCollection from '../components/BlogCollection';
 import Footer from '../components/Footer';
 import axios from 'axios';
+import { API_URL } from '../services/api';
+import { findPictureTopicByKey } from '../services/api_header';
 
 const HomePage = () => {
   const [headerData, setHeaderData] = useState(null);
@@ -21,8 +23,12 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8081/api/header-settings/1');
-        setHeaderData(response.data);
+        const response = await findPictureTopicByKey('header-topic');
+        if(response.success == 200){
+
+          console.log('response:', response.data);
+          setHeaderData(response.data);
+        }
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -35,8 +41,8 @@ const HomePage = () => {
     <div className="flex flex-col h-auto w-screen bg-white pt-[120px]"> {/* Adjust padding to account for both Header and Menu */}
       <Header />
       <Menu />
-      <ImageSlider imageData={headerData?.pictureArtList || []} />
-      <Intro desc={headerData?.desc || ''} title={headerData?.title || ''} />
+      <ImageSlider imageData={headerData?.items || []} />
+      <Intro desc={headerData?.desc || ''} title={headerData?.name || ''} />
       <Topic />
       <ArtistCollection />
       <NewCollection />
