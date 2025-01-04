@@ -18,9 +18,9 @@ import GalleryTour from '../components/GalleryTour';
 // Dung 
 const GalleryTourPage = () => {
   return (
-    <div className='flex flex-col h-auto w-screen bg-white'>
+    <div className='flex flex-col w-screen h-auto bg-white'>
         <Header/>
-        <Menu/>
+        <Menu/> 
         <ImageSlider imageData={imagesData} />
         {/* <Intro/>
         <Topic/>
@@ -29,8 +29,8 @@ const GalleryTourPage = () => {
         <VietnamPaitingCollection/>
         <CustomerFeedback/>
         <BlogCollection/> */}
-        <GalleryTour/>
-        <Footer/>
+       
+        {/* <Footer/> */}
     </div>
   )
 }

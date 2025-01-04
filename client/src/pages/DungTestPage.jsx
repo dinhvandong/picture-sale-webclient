@@ -20,12 +20,12 @@ import DungTest from '../components/dungnt/Test';
 
 const DungTestPage = () => {
   return (
-    <div className='flex flex-col h-auto w-screen bg-white'>
-        <Header/>
-        <Menu/>
+    <div className='flex flex-col w-screen h-auto bg-white'>
+        {/* <Header/>
+        <Menu/> */}
         {/* <ImageSlider imageData={imagesData} /> */}
-        <DungTest/>
-        <Footer/>
+        {/* <DungTest/> */}
+        {/* <Footer/> */}
     </div>
   )
 }

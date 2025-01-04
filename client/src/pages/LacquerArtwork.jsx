@@ -21,12 +21,12 @@ import LongTest from '../components/longth/Test';
 
 const LacquerArtworkPage = () => {
   return (
-    <div className='flex flex-col h-auto w-screen bg-white'>
+    <div className='flex flex-col w-screen h-auto bg-white'>
         <Header/>
         <Menu/>
-        {/* <ImageSlider imageData={imagesData} /> */}
+        {/* <ImageSlider imageData={imagesData} />
         <LongTest/>
-        <Footer/>
+        <Footer/> */}
     </div>
   )
 }
