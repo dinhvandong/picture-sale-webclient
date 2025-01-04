@@ -26,8 +26,8 @@ const Menu = () => {
     const gotoGalleryTourPage = () => navigate('/gallery-tour');
     const gotoLacquerArtwork = () => navigate('/artist-vn/artist-lacquer-artwork');
     const gotoPaintingPage = () => navigate('/artwork/landscape-paintings');
-    const gotoHomePage = () => navigate('/');
-    const gotoSpecialArtCollection = () => navigate('/');
+    const gotoHomePage = () => navigate('/homepage');
+    const gotoSpecialArtCollection = () => navigate('/special');
     const gotoArtistVnPage = () => navigate('/artist-vn');
 
 

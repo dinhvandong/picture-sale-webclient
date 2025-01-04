@@ -26,7 +26,7 @@ function App() {
     <LanguageProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage/>} />
+          <Route path="/homepage" element={<HomePage/>} />
           <Route path="/about" element={<AboutPage />}/>
           <Route path="/gallery-tour" element={<GalleryTourPage />} />
           <Route path="/artist-vn" element={<ArtistVnPage />} />
