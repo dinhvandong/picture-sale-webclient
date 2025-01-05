@@ -1,16 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import ArtistVnItem from './ArtistVnItem';
+import axios from "axios";
 
 const ArtistVn = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]); // Lưu danh sách họa sĩ
+  const [loading, setLoading] = useState(true); // Hiển thị trạng thái tải dữ liệu
+  const [error, setError] = useState(null); // Lưu lỗi nếu có
 
   useEffect(() => {
-    // Fetch data from the JSON file
-    fetch('/data.json')
-      .then((response) => response.json())
-      .then((data) => setItems(data));
+    // Gọi API để lấy danh sách họa sĩ
+    axios
+      .post("http://150.95.114.87:8081/api/artist/findAll") // Thay URL API thực tế
+      .then((response) => {
+        console.log("API Response:", response.data); // Kiểm tra dữ liệu trả về
+        setItems(response.data.data); // Gán dữ liệu vào state `items`
+        setLoading(false); // Kết thúc trạng thái tải
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error); // Log lỗi
+        setError(error.message);
+        setLoading(false); // Kết thúc trạng thái tải
+      });
   }, []);
 
+  if (loading) return <p>Loading...</p>; // Hiển thị khi đang tải
+  if (error) return <p>Error: {error}</p>; // Hiển thị lỗi nếu có
+
+   
   return (
     <div className="flex flex-col items-center justify-between w-full h-auto p-5 font-sans bg-[#27242E]">
       {/* Header Section */}
@@ -34,10 +50,11 @@ const ArtistVn = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {items.map((item) => (
             <ArtistVnItem
-              key={item.id}
-              artwork={item.artwork}
-              title={item.title}
-              image={item.image}
+            key={item.id}
+            id={item.id}
+            artwork={item.artwork} // Nếu API không có `artwork`, thay bằng trường phù hợp
+            title={item.name.vi} // Dùng `name.vi` để hiển thị tên tiếng Việt
+            image={item.avatar} // URL ảnh từ API (thay `avatar` nếu cần)
             />
           ))}
         </div>

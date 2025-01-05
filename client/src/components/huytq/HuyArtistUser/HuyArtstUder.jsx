@@ -1,18 +1,47 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ArtworksUser from './ArtworksUser';
+import { useParams } from "react-router-dom";
+import axios from "axios";
 import Biography from './Biography';
 import MessagetoGalleryOwner from './MessagetoGalleryOwner';
 
 
 
 const HuyArtstUder = () => {
-
     const [activeTab, setActiveTab] = useState('catalogue'); // State để quản lý tab hiện tại
+    const { id } = useParams(); // Lấy ID từ URL
+    const [artist, setArtist] = useState({
+        name: { en: "" },
+        journey: { en: "" },
+        avatar: "",
+      });
+      
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        axios
+          .get(`http://150.95.114.87:8081/api/artist/findById`, {
+            params: { id },
+          })
+          .then((response) => {
+            console.log("API Response:", response.data); // Kiểm tra dữ liệu trả về
+            const artistData = response.data?.data; // Lấy dữ liệu đúng cấp
+            setArtist(artistData);
+            setLoading(false);
+          })
+          .catch((error) => {
+            console.error("Error fetching artist details:", error);
+            setLoading(false);
+          });
+      }, [id]);
+      
+
+    if (loading) return <p>Loading...</p>; // Hiển thị khi đang tải
+    if (!artist) return <p>Artist not found</p>; // Hiển thị nếu không tìm thấy họa sĩ
     return (
         <div className='mt-28'>
             <div className='bg-[#2b3945] flex justify-between  px-32 py-9'>
 
-                <h1 className='text-3xl  text-white '>Home <span className='text-gray-500 font-medium mx-2'>/</span> <span className='font-bold'>Dau Quang Toan</span></h1>
+                <h1 className='text-3xl  text-white '>Home <span className='text-gray-500 font-medium mx-2'>/</span> <span className='font-bold'>{artist?.name.en || "No Name"}</span></h1>
                 <select className='bg-[#55616a] text-white text-xl px-2 py-2 rounded-full' name="cars" id="cars">
                     <option value="volvo">Sort by popularity</option>
                     <option value="saab">Sort by average rating</option>
@@ -32,8 +61,8 @@ const HuyArtstUder = () => {
                         <button
                             onClick={() => setActiveTab('catalogue')}
                             className={`py-2 px-4 rounded-full ${activeTab === 'catalogue'
-                                    ? 'border-2 border-white text-white font-bold text-2xl transition  duration-300'
-                                    : 'text-[#d4d3d5] hover:text-white font-bold text-2xl transition  duration-300'
+                                ? 'border-2 border-white text-white font-bold text-2xl transition  duration-300'
+                                : 'text-[#d4d3d5] hover:text-white font-bold text-2xl transition  duration-300'
                                 }`}
                         >
                             Catalogue
@@ -41,8 +70,8 @@ const HuyArtstUder = () => {
                         <button
                             onClick={() => setActiveTab('biography')}
                             className={`py-2 px-4 rounded-full ${activeTab === 'biography'
-                                   ? 'border-2 border-white text-white font-bold text-2xl transition  duration-300'
-                                    : 'text-[#d4d3d5] hover:text-white font-bold text-2xl transition  duration-300'
+                                ? 'border-2 border-white text-white font-bold text-2xl transition  duration-300'
+                                : 'text-[#d4d3d5] hover:text-white font-bold text-2xl transition  duration-300'
                                 }`}
                         >
                             Biography
@@ -50,8 +79,8 @@ const HuyArtstUder = () => {
                         <button
                             onClick={() => setActiveTab('message')}
                             className={`py-2 px-4 rounded-full ${activeTab === 'message'
-                                   ? 'border-2 border-white text-white font-bold text-2xl transition  duration-300'
-                                    : 'text-[#d4d3d5] hover:text-white font-bold text-2xl transition  duration-300'
+                                ? 'border-2 border-white text-white font-bold text-2xl transition  duration-300'
+                                : 'text-[#d4d3d5] hover:text-white font-bold text-2xl transition  duration-300'
                                 }`}
                         >
                             Message to Gallery Owner
@@ -61,13 +90,13 @@ const HuyArtstUder = () => {
                     {/* Nội dung các tab */}
                     <div className="mt-4">
                         {activeTab === 'catalogue' && (
-                            <ArtworksUser/>
+                            <ArtworksUser />
                         )}
                         {activeTab === 'biography' && (
-                            <Biography/>
+                            <Biography />
                         )}
                         {activeTab === 'message' && (
-                            <MessagetoGalleryOwner/>
+                            <MessagetoGalleryOwner />
                         )}
                     </div>
                 </div>

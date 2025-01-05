@@ -1,17 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
+import axios from "axios";
 import ArtworksUser from './ArtworksUser'
 
 const Biography = () => {
+        const { id } = useParams(); // Lấy ID từ URL
+        const [artist, setArtist] = useState({
+            name: { en: "" },
+            journey: { en: "" },
+            avatar: "",
+          });
+          
+        const [loading, setLoading] = useState(true);
+        useEffect(() => {
+            axios
+              .get(`http://150.95.114.87:8081/api/artist/findById`, {
+                params: { id },
+              })
+              .then((response) => {
+                console.log("API Response:", response.data); // Kiểm tra dữ liệu trả về
+                const artistData = response.data?.data; // Lấy dữ liệu đúng cấp
+                setArtist(artistData);
+                setLoading(false);
+              })
+              .catch((error) => {
+                console.error("Error fetching artist details:", error);
+                setLoading(false);
+              });
+          }, [id]);
+          
+    
+        if (loading) return <p>Loading...</p>; // Hiển thị khi đang tải
+        if (!artist) return <p>Artist not found</p>; // Hiển thị nếu không tìm thấy họa sĩ
+        
     return (
         <div className='mt-10'>
             <div className='flex text-xl '>
             <div className='  w-3/5 pr-10'>
-                <img className='w-full' src='https://www.nguyenartgallery.com/wp-content/uploads/dau-quang-toan.jpg' alt='anh' />
+                <img className='w-full' src={artist.avatar} alt={artist.id} />
             </div>
             <div className='text-xl text-white w-2/5'>
-                <p>Artist Dau Quang Toan was born in 1952 and currently lives and works in Hanoi. His family has always been associated with art when his two sons, Dau Quang Anh & Dau Quang Nhat, are both talented painters.</p>
-                <p className='my-6'>Artist Dau Quang Toan shared that his inspiration comes from the desire to find beauty, the truth - goodness - beauty, so they all exploit nature from the past and present life between the past and present.</p>
-                <p>The famous Vietnamese artist Ngo Thanh Nhan commented: "Dau Quang Toan is a player of warm, coherent colors in his artworks."</p>
+                <p>{artist.journey.en}</p>
                 <h1 className=' text-4xl text-[#e5ae0b] font-semibold mt-6 mb-4'>Exhibitions & Art Events</h1>
                 <ul className='list-disc ml-5'>
                     <li className='my-2'>
