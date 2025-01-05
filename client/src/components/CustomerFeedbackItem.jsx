@@ -12,6 +12,8 @@ const CustomerFeedbackItem = ({ title, image, comment }) => (
             <FaStar className="w-5 h-5 ml-2 text-header_color"/>
 
         </div>
+
+        
         
         <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
         <p>{comment}</p>
