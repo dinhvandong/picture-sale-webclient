@@ -12,7 +12,6 @@ import VietnamPaitingCollection from '../components/VietnamPaitingCollection';
 import CustomerFeedback from '../components/CustomerFeedback';
 import BlogCollection from '../components/BlogCollection';
 import Footer from '../components/Footer';
-import { AboutBody } from '../components/AboutBody';
 import GalleryTour from '../components/GalleryTour';
 import ArtistVn from '../components/ArtistVn';
 import Huy from '../components/huytq/Huy';

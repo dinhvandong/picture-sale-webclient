@@ -12,15 +12,14 @@ import VietnamPaitingCollection from '../components/VietnamPaitingCollection';
 import CustomerFeedback from '../components/CustomerFeedback';
 import BlogCollection from '../components/BlogCollection';
 import Footer from '../components/Footer';
-import { AboutBody } from '../components/AboutBody';
 import GalleryTour from '../components/GalleryTour';
 
 // Dung 
 const GalleryTourPage = () => {
   return (
-    <div className='flex flex-col w-screen h-auto bg-white'>
+    <div className='flex flex-col h-auto w-screen bg-white'>
         <Header/>
-        <Menu/> 
+        <Menu/>
         <ImageSlider imageData={imagesData} />
         {/* <Intro/>
         <Topic/>
@@ -29,8 +28,8 @@ const GalleryTourPage = () => {
         <VietnamPaitingCollection/>
         <CustomerFeedback/>
         <BlogCollection/> */}
-       
-        {/* <Footer/> */}
+        <GalleryTour/>
+        <Footer/>
     </div>
   )
 }

@@ -12,7 +12,6 @@ import VietnamPaitingCollection from '../components/VietnamPaitingCollection';
 import CustomerFeedback from '../components/CustomerFeedback';
 import BlogCollection from '../components/BlogCollection';
 import Footer from '../components/Footer';
-import { AboutBody } from '../components/AboutBody';
 import GalleryTour from '../components/GalleryTour';
 import ArtistVn from '../components/ArtistVn';
 import Huy from '../components/huytq/Huy';
@@ -20,12 +19,12 @@ import DungTest from '../components/dungnt/Test';
 
 const DungTestPage = () => {
   return (
-    <div className='flex flex-col w-screen h-auto bg-white'>
-        {/* <Header/>
-        <Menu/> */}
+    <div className='flex flex-col h-auto w-screen bg-white'>
+        <Header/>
+        <Menu/>
         {/* <ImageSlider imageData={imagesData} /> */}
-        {/* <DungTest/> */}
-        {/* <Footer/> */}
+        <DungTest/>
+        <Footer/>
     </div>
   )
 }
