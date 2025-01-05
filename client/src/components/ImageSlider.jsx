@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MdSkipNext } from "react-icons/md";
 import { MdSkipPrevious } from "react-icons/md";
+import { API_URL_IMAGE } from '../services/api';
 
 const ImageSlider = ({ imageData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,31 +15,46 @@ const ImageSlider = ({ imageData }) => {
     setCurrentIndex((prevIndex) => (prevIndex === totalImages - 1 ? 0 : prevIndex + 1));
   };
 
+  // Auto transition effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goToNext();
+    }, 3000); // 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [currentIndex]); // Dependency ensures it works seamlessly
+
   return (
-    <div className='w-full' style={{ position: 'relative' }}>
-      <div style={{ overflowX: 'auto', whiteSpace: 'nowrap', marginBottom: '10px' }}>
+    <div className="w-full" style={{ position: 'relative' }}>
+      <div style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
         {imageData.map((image, index) => (
           <img
-           className='w-full'
+            className="w-full"
             key={image?.id}
-            src={image?.thumb}
+            src={API_URL_IMAGE + image?.thumb}
             alt={`Image ${image?.id}`}
             style={{
               display: index === currentIndex ? 'inline-block' : 'none',
-            //   maxWidth: '100%',
               maxHeight: '600px',
             }}
           />
         ))}
       </div>
-      <button className="m-5 bg-blue-500 rounded-full p-2 text-white" style={{ position: 'absolute', top: '50%', left: 0 }} onClick={goToPrevious}>
+      <button
+        className="p-2 m-5 text-white bg-blue-500 rounded-full"
+        style={{ position: 'absolute', top: '50%', left: 0 }}
+        onClick={goToPrevious}
+      >
         <MdSkipPrevious className="w-6 h-6" />
       </button>
-      <button className="mr-5 bg-blue-500 rounded-full p-2 text-white" style={{ position: 'absolute', top: '50%', right: 0 }} onClick={goToNext}>
+      <button
+        className="p-2 mr-5 text-white bg-blue-500 rounded-full"
+        style={{ position: 'absolute', top: '50%', right: 0 }}
+        onClick={goToNext}
+      >
         <MdSkipNext className="w-6 h-6" />
       </button>
     </div>
   );
 };
-
 export default ImageSlider;

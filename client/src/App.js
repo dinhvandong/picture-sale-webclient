@@ -12,6 +12,7 @@ import PaintingDetailPage from './pages/PaintingDetailPage';
 import { useEffect } from 'react';
 import { LanguageProvider } from './LanguageContext';
 import SpecialCollectionPage from './pages/SpecialCollectionPage';
+import PictureArtDetailPage from './pages/PictureArtDetailPage';
  // Import LanguageProvider
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
           <Route path="/artwork/landscape-paintings" element={<PaintingPage />} />
           <Route path="/chat-with-our-art-collector" element={<DungTestPage />} />
           <Route path="/artist-vn/artist-lacquer-artwork" element={<LacquerArtworkPage />} />
-          <Route path="/paiting-detail" element={<PaintingDetailPage />} />
+          <Route path="/picture-art-detail/:id" element={<PictureArtDetailPage />}/>
           <Route path="/special" element={<SpecialCollectionPage/>}/>
 
 

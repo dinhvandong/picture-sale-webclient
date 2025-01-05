@@ -1,9 +1,15 @@
-import React, { useRef, useState} from 'react'
-import Bba from './baba.json'
+import React, { useContext, useRef, useState } from 'react';
 import { FiChevronDown } from "react-icons/fi";
+import PaitingDetail from '../PaitingDetail';
+import { findByArtistID } from '../../services/api_picture_art';
+import { API_URL_IMAGE } from '../../services/api';
+import { LanguageContext } from '../../LanguageContext';
+import { useNavigate } from 'react-router-dom';
+import { useUpdate } from 'react-use';
 
-
-const Babamt = () => {
+const PictureArtDetail = ({ idPicture }) => {
+    const navigate = useNavigate();
+    const { language } = useContext(LanguageContext);
     const scrollRef = useRef(null);
     const isDragging = useRef(false);
     const startX = useRef(0);
@@ -13,22 +19,82 @@ const Babamt = () => {
         isDragging.current = true;
         startX.current = e.pageX - scrollRef.current.offsetLeft;
         scrollLeft.current = scrollRef.current.scrollLeft;
-        scrollRef.current.style.cursor = 'grabbing'; // Hiển thị con trỏ là 'grabbing'
+        scrollRef.current.style.cursor = 'grabbing';
     };
 
     const handleMouseMove = (e) => {
         if (!isDragging.current) return;
         e.preventDefault();
         const x = e.pageX - scrollRef.current.offsetLeft;
-        const walk = (x - startX.current) * 2; // Tăng tốc độ cuộn
+        const walk = (x - startX.current) * 2;
         scrollRef.current.scrollLeft = scrollLeft.current - walk;
     };
 
     const handleMouseUpOrLeave = () => {
         isDragging.current = false;
-        scrollRef.current.style.cursor = 'grab'; // Quay lại con trỏ ban đầu
+        scrollRef.current.style.cursor = 'grab';
     };
 
+    const [data, setData] = useState([]);
+    const [artistID, setArtistID] = useState(null);
+    const [artistName, setArtistName] = useState(null);
+
+    const isFetched = useRef(false); // Add this to prevent multiple calls
+    // const removeItemById = (idPictureToRemove) => {
+    //     console.log("Removing picture with id:", idPictureToRemove); // Debug log
+    //     setData((prevData) => {
+    //         console.log("Current data before removal:", prevData); // Debug log
+    //         const updatedData = prevData.filter(item => item.id !== idPictureToRemove);
+    //         console.log("Updated data after removal:", updatedData); // Debug log
+    //         return updatedData;
+    //     });
+    // };
+
+    const removeItemById = (idPictureToRemove) => {
+        const idToRemove = parseInt(idPictureToRemove, 10); // Ensure it's an integer
+        console.log("Removing item with id:", idToRemove); // Log the integer id
+        setData((prevData) => {
+            console.log("Previous data before removal:", prevData); // Log previous data
+            // Filter out the item with the matching id
+            const updatedData = prevData.filter(item => item.id !== idToRemove);
+            console.log("Updated data after removal:", updatedData); // Log updated data
+            return updatedData; // Return updated data
+        });
+    };
+    
+    
+    const handleArtistIDRetrieved = async (id, name) => {
+        // Prevent multiple API calls
+        if (isFetched.current) {
+            console.log("API call already made, skipping.");
+            return;
+        }
+
+        isFetched.current = true; // Set flag to true on the first call
+
+        setArtistID(id);
+        console.log("Artist ID retrieved from child:", id);
+
+        setArtistName(name);
+
+
+        try {
+            const response = await findByArtistID(id);
+
+            setData(response || []); // Assuming response has a `data` property
+
+            console.log('response',response);
+            console.log('idPicture',idPicture);
+           removeItemById(idPicture);
+           
+
+        } catch (error) {
+            console.error("Error fetching data by artist ID:", error);
+        }
+    };
+
+    const gotoSpecialArtCollection = (id) =>
+        navigate(`/picture-art-detail/${id}`);
 
     const [isOpen, setIsOpen] = useState(false);  // Quản lý trạng thái của bảng danh sách quốc gia
     const [selectedCountry, setSelectedCountry] = useState('Choose a country'); // Quốc gia đã chọn
@@ -57,6 +123,7 @@ const Babamt = () => {
         setIsOpen(false);  // Đóng bảng danh sách
     };
 
+
     const [isOpen2, setIsOpen2] = useState(false);  // Quản lý trạng thái của bảng danh sách quốc gia
     const [selectedCountry2, setSelectedCountry2] = useState('Choose a country'); // Quốc gia đã chọn
 
@@ -64,10 +131,9 @@ const Babamt = () => {
     const countries2 = [
         'Roller in Tube',
         'Stredert',
-       
+
     ];
 
-    // Hàm để thay đổi trạng thái của bảng khi nhấn vào nút
     const toggleDropdown2 = () => {
         setIsOpen2(!isOpen2);
     };
@@ -78,11 +144,18 @@ const Babamt = () => {
         setIsOpen2(false);  // Đóng bảng danh sách
     };
 
-
     return (
-        <div className='w-full h-max bg-[#27232E] flex flex-col items-center'>
-            <div className='w-full h-[120px]'></div>
-            <div className='w-[60%] h-max flex flex-col'>
+        <div className="w-full h-max bg-[#27232E] flex flex-col items-center">
+            <div className="w-full h-[120px]"></div>
+            <div className="w-[60%] h-max flex flex-col">
+                {<PaitingDetail id={idPicture} onArtistIDRetrieved={handleArtistIDRetrieved} />}
+
+                <div className="w-full h-[50px] flex flex-row justify-between  items-center bg-[#27232E]">
+                    <div className='w-[100%] h-[1px] bg-gray-200'></div>
+                    <p className='text-[#E5AE0B] text-[25px] w-[700px] text-center font-bold'>{artistName ? artistName[language] : "Unknown Artist"}</p>
+                    <div className='w-[100%] h-[1px] bg-gray-200'></div>
+                </div>
+
                 <div
                     ref={scrollRef}
                     className="grid grid-flow-col auto-cols-[50%] gap-4 overflow-hidden mt-3 cursor-grab"
@@ -90,38 +163,36 @@ const Babamt = () => {
                     onMouseMove={handleMouseMove}
                     onMouseUp={handleMouseUpOrLeave}
                     onMouseLeave={handleMouseUpOrLeave}
-                    style={{
-                        userSelect: 'none', // Ngăn chọn văn bản khi kéo
-                    }}
+                    style={{ userSelect: 'none' }}
                 >
-                    {Bba.map((item) => (
+                    {data.map((item) => (
                         <div
                             key={item.id}
-                            className="flex flex-col items-center bg-[#27232E] hover:bg-[#222222] w-full
-                            transform hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
+                            className="flex flex-col items-center bg-[#27232E] hover:bg-[#222222] w-full transform hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
                         >
                             <img
-                                src={item.img}
+                                onClick={() => gotoSpecialArtCollection(item.id)}
+                                src={API_URL_IMAGE + item.thumb}
                                 alt={`img-${item.id}`}
                                 className="object-cover w-full h-auto"
                             />
                             <p className="text-[13px] m-1 leading-none font-bold text-gray-400 mt-4">
-                                {item.text1}
+                                {item.artist?.name[language]}
                             </p>
                             <p className="text-[15px] m-1 leading-none text-[#FFEF96]">
-                                {item.text2}
+                                {item.name[language]}
                             </p>
                             <div className="w-full h-[30px] flex items-center flex-row border-b-[0.5px] border-gray-400">
                                 <p className="text-[15px] font-bold text-white">ARTIST:</p>
-                                <p className="text-[14px] text-white ml-16">{item.text3}</p>
+                                <p className="text-[14px] text-white ml-16">{item.artist?.name[language]}</p>
                             </div>
                             <div className="w-full h-[30px] flex items-center flex-row border-b-[0.5px] border-gray-400">
                                 <p className="text-[15px] font-bold text-white">MATERIAL:</p>
-                                <p className="text-[14px] text-white ml-10">{item.text4}</p>
+                                <p className="text-[14px] text-white ml-10">{item.materials?.name[language]}</p>
                             </div>
                             <div className="w-full h-[30px] flex items-center border-b-[0.5px] border-gray-400">
                                 <p className="text-[15px] flex flex-row font-bold text-white">
-                                    SIZE:<span className="ml-2 text-[14px] font-normal">{item.text5}</span>
+                                    SIZE:<span className="ml-2 text-[14px] font-normal">{item.size}</span>
                                 </p>
                             </div>
                         </div>
@@ -155,7 +226,7 @@ const Babamt = () => {
                             onClick={toggleDropdown}
                         >
                             <span>{selectedCountry}</span> {/* Hiển thị quốc gia đã chọn */}
-                            <FiChevronDown className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                            <FiChevronDown className={`transition-transform ${isOpen}? 'rotate-180' : ''`} />
                         </button>
 
                         {/* Bảng danh sách các quốc gia */}
@@ -188,7 +259,7 @@ const Babamt = () => {
                             onClick={toggleDropdown2}
                         >
                             <span>{selectedCountry2}</span> {/* Hiển thị quốc gia đã chọn */}
-                            <FiChevronDown className={`transition-transform ${isOpen2 ? 'rotate-180' : ''}`} />
+                            <FiChevronDown className={`transition-transform ${isOpen2} ? 'rotate-180' : '' `} />
                         </button>
 
                         {/* Bảng danh sách các quốc gia */}
@@ -208,16 +279,16 @@ const Babamt = () => {
                             </div>
                         )}
                     </div>
-                    
+                    <div className='w-full h-[100px] bg-[#43464B] flex justify-center items-center'>
+                        <button className='w-[90%] h-[40px] hover:bg-[#36383C] text-white text-[18px] font-bold '>SEND MY INQUIRY</button>
+                    </div>
 
-                </div>
-                <div className='w-full h-[100px] bg-[#43464B] flex justify-center items-center'>
-                    <button className='w-[90%] h-[40px] hover:bg-[#36383C] text-white text-[18px] font-bold '>SEND MY INQUIRY</button>
+
                 </div>
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default Babamt
+export default PictureArtDetail;
+
