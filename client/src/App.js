@@ -11,7 +11,9 @@ import LacquerArtworkPage from './pages/LacquerArtwork';
 import PaintingDetailPage from './pages/PaintingDetailPage';
 import { useEffect } from 'react';
 import { LanguageProvider } from './LanguageContext';
-import Toan2 from './components/toan2/Toan2'; // Import LanguageProvider
+import HuyArtistPage from './pages/HuyArtistPage';
+import HuyArtistUserPage from './pages/HuyArtistUserPage';
+
 
 function App() {
   // useEffect(() => {
@@ -25,7 +27,9 @@ function App() {
     <LanguageProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage/>} />
+          <Route path="/huy-artis" element={<HuyArtistPage />} />
+          <Route path="/huy-artis-user" element={<HuyArtistUserPage/>} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/gallery-tour" element={<GalleryTourPage />} />

@@ -41,7 +41,7 @@ const Huy = () => {
   }
 
   return (
-    <div className='bg-[#27242E] '>
+    <div className='bg-[#27242E] mt-28'>
 
       <div className='artis-profile text-white px-[50px]'>
         <h1 className='text-center text-2xl text-[#ffef96] font-bold my-[18px] mt-7'>Artist Pham Hoang Minh – Vietnamese Oil & Acrylic Paintings – Nguyen Art Gallery</h1>

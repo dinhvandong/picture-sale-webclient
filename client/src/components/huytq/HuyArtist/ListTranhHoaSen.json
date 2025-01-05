@@ -1,0 +1,30 @@
+[
+    {
+        "image": "https://www.kiettacnghethuat.com/wp-content/uploads/Bach-Lien-Tri-VIII-90x180-1.jpg",
+        "artist": "Đỗ Khải",
+        "tenTranh": "Bạch Liên Trì VIII",
+        "chatLieu": " Sơn mài trên gỗ",
+        "size": "90cm x 180cm"
+    },
+    {
+        "image": "https://www.kiettacnghethuat.com/wp-content/uploads/Bach-Hac-Lien-Mai-140x80-1.jpg",
+        "artist": "Đỗ Khải",
+        "tenTranh": "Bạch Hạc Liên Hoa",
+        "chatLieu": " Sơn mài trên gỗ",
+        "size": "90cm x 180cm"
+    },
+    {
+        "image": "https://www.kiettacnghethuat.com/wp-content/uploads/Uyen-Uong-80x160-1-e1730165929837-762x1536.png",
+        "artist": "Đỗ Khải",
+        "tenTranh": "Uyên Ương",
+        "chatLieu": " Sơn mài trên gỗ",
+        "size": "160cm x 80cm"
+    },
+    {
+        "image": "https://www.kiettacnghethuat.com/wp-content/uploads/Bach-Hac-Vu-Lien-Hoa-100x60-1.jpg",
+        "artist": "Đỗ Khải",
+        "tenTranh": "Bạch Vũ Liên Hoa",
+        "chatLieu": " Sơn mài trên gỗ",
+        "size": "120cm x 80cm"
+    }
+]
