@@ -5,6 +5,7 @@ import Toan from './toan.json';
 const ToanTest = () => {
   return (
     <div className='flex flex-col w-full h-max'>
+      <div className='w-full h-[120px]'></div>
       <div className='w-full h-[800px] bg-cover bg-[url(https://www.nguyenartgallery.com/wp-content/uploads/Vietnamese-Paintings-Artists-1-2048x1024.jpg)]'></div>
       <div className='flex flex-col items-center w-full h-max bg-[#27242E]'>
         <p className='text-[#FFEF96] mt-4 font-bold text-[30px]'>Landscape Paintings | | Oustanding Collection of Landscape Paintings by Famous Vietnamese Artists</p>

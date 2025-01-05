@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { LanguageContext } from '../LanguageContext'; // Import the context
 import { findPictureTopicByKey } from '../services/api_header';
+import { API_URL_IMAGE } from '../services/api';
 
 const Topic = () => {
   const { language } = useContext(LanguageContext); // Get the current language from context
@@ -57,8 +58,8 @@ const Topic = () => {
       {/* Image Section */}
       <div className='flex w-full flex-col md:flex-row h-auto md:h-[600px]'>
         <img
-          className='w-full h-full object-cover'
-          src={data?.thumb || 'https://i.pinimg.com/564x/ea/0b/a5/ea0ba50cde7fbf51119707780a90383a.jpg'}
+          className='object-cover w-full h-full'
+          src={API_URL_IMAGE + data?.thumb || 'https://i.pinimg.com/564x/ea/0b/a5/ea0ba50cde7fbf51119707780a90383a.jpg'}
           alt='Topic Thumbnail'
         />
       </div>

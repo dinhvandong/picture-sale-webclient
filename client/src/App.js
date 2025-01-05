@@ -11,7 +11,9 @@ import LacquerArtworkPage from './pages/LacquerArtwork';
 import PaintingDetailPage from './pages/PaintingDetailPage';
 import { useEffect } from 'react';
 import { LanguageProvider } from './LanguageContext';
-import Toan2 from './components/toan2/Toan2'; // Import LanguageProvider
+import SpecialCollectionPage from './pages/SpecialCollectionPage';
+import PictureArtDetailPage from './pages/PictureArtDetailPage';
+ // Import LanguageProvider
 
 function App() {
   // useEffect(() => {
@@ -25,16 +27,17 @@ function App() {
     <LanguageProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage/>} />
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/homepage" element={<HomePage/>} />
+          <Route path="/about" element={<AboutPage />}/>
           <Route path="/gallery-tour" element={<GalleryTourPage />} />
           <Route path="/artist-vn" element={<ArtistVnPage />} />
           <Route path="/artist-vn/nguyen-van-huy" element={<HuyTqPage />} />
           <Route path="/artwork/landscape-paintings" element={<PaintingPage />} />
           <Route path="/chat-with-our-art-collector" element={<DungTestPage />} />
           <Route path="/artist-vn/artist-lacquer-artwork" element={<LacquerArtworkPage />} />
-          <Route path="/paiting-detail" element={<PaintingDetailPage />} />
+          <Route path="/picture-art-detail/:id" element={<PictureArtDetailPage />}/>
+          <Route path="/special" element={<SpecialCollectionPage/>}/>
+
 
           {/* Uncomment or modify other routes as needed */}
         </Routes>

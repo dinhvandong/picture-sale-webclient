@@ -1,8 +1,12 @@
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import { FaSearchPlus, FaSearchMinus, FaExpand } from "react-icons/fa"; // Import icons
+import { findPictureArtById } from "../services/api_picture_art";
+import { API_URL_IMAGE } from "../services/api";
+import { LanguageContext } from "../LanguageContext";
 
-function PaitingDetail() {
+function PaitingDetail({id,  onArtistIDRetrieved}) {
+  const { language } = useContext(LanguageContext);
   const [scale, setScale] = useState(1); // initial scale for zoom
   const imageContainerRef = useRef(null); // reference for full-screen
 
@@ -24,72 +28,57 @@ function PaitingDetail() {
     }
   };
 
+  const [pictureArt, setPictureArt] = useState({
+    id:id,
+    name: { vi: '', en: '' },
+    artistID: '',
+    thumb: '',
+    categoriesID: '',
+    materialsID: '',
+    size: '',
+  });
+
+  // Fetch data for categories, materials, and artists
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+       
+        const pictureArtResponse = await findPictureArtById(id);
+        if (pictureArtResponse.success === 200) {
+          const fetchedData = pictureArtResponse.data;
+          console.log('fetchedData',fetchedData);
+          
+          setPictureArt(fetchedData);
+
+           // Invoke callback with artistID
+           if (onArtistIDRetrieved) {
+           // onArtistIDRetrieved(fetchedData.artistID);
+           if (onArtistIDRetrieved) {
+            onArtistIDRetrieved(fetchedData.artistID, fetchedData.artist?.name);
+          }
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, [id, onArtistIDRetrieved]);
+
   return (
-    <div className="bg-[#27242D] w-full md:w-full text-white flex flex-col md:flex-row  justify-center p-5 space-y-4 md:space-y-0 md:space-x-10">
-      {/* <div
-        ref={imageContainerRef}
-        className="relative border-2 border-gray-300 rounded-lg shadow-md overflow-hidden"
-        style={{
-          width: "400px",
-          height: "auto",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <img
-          src="https://www.nguyenartgallery.com/wp-content/uploads/Hong-II-150x60-1.jpg"
-          alt="Curious II"
-          style={{
-            transform: `scale(${scale})`,
-            transition: "transform 0.3s ease",
-          }}
-        />
+    <div className="bg-[#27242D] w-full md:w-full text-white flex flex-col md:flex-row  justify-center space-y-4 md:space-y-0 md:space-x-10">
+   
 
-        <div className="absolute top-2 right-2 space-x-2 flex">
-          <button
-            onClick={handleZoomIn}
-            className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-200"
-          >
-            <FaSearchPlus size={20} />
-          </button>
-          <button
-            onClick={handleZoomOut}
-            className="p-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition duration-200"
-          >
-            <FaSearchMinus size={20} />
-          </button>
-          <button
-            onClick={handleFullScreen}
-            className="p-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition duration-200"
-          >
-            <FaExpand size={20} />
-          </button>
-        </div>
-      </div> */}
+      <div className="flex flex-col w-full mt-3 md:flex-row">
 
-
-      <div className="w-full md:w-[60%] flex flex-col md:flex-row">
-
-        {/* <img
-          src="https://www.nguyenartgallery.com/wp-content/uploads/Hong-II-150x60-1.jpg"
-          alt="Curious II"
-          className="w-1/2 h-["
-         
-        /> */}
+      
         <div
           ref={imageContainerRef}
-          className="relative border-2  border-gray-300 rounded-lg shadow-md overflow-hidden"
-          style={{
-            width: "400px",
-            height: "400px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          className="relative w-[50%] h-auto overflow-hidden border-2 border-gray-300"
+       
         >
           <img
-            src="https://www.nguyenartgallery.com/wp-content/uploads/Hong-II-150x60-1.jpg"
+            src={API_URL_IMAGE + pictureArt.thumb}
             alt="Curious II"
             style={{
               transform: `scale(${scale})`,
@@ -97,38 +86,40 @@ function PaitingDetail() {
             }}
           />
 
-          <div className="absolute top-2 right-2 space-x-2  flex">
+          <div className="absolute flex space-x-2 top-2 right-2">
             <button
               onClick={handleZoomIn}
-              className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-200"
+              className="p-2 text-white transition duration-200 bg-blue-500 rounded-full hover:bg-blue-600"
             >
               <FaSearchPlus size={20} />
             </button>
             <button
               onClick={handleZoomOut}
-              className="p-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition duration-200"
+              className="p-2 text-white transition duration-200 bg-red-500 rounded-full hover:bg-red-600"
             >
               <FaSearchMinus size={20} />
             </button>
             <button
               onClick={handleFullScreen}
-              className="p-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition duration-200"
+              className="p-2 text-white transition duration-200 bg-green-500 rounded-full hover:bg-green-600"
             >
               <FaExpand size={20} />
             </button>
           </div>
         </div>
 
-        <div className="ml-5 w-1/2 text-left space-y-2">
-          <p className="text-xl font-bold">Name: Curious II</p>
-          <p className="text-lg font-semibold">Artist: Dang Vu Ha</p>
-          <p className="text-md">Material: Oil on canvas</p>
-          <p className="text-md">Size: 150cm x 60cm | 59 inches x 23.6 inches</p>
-          <p className="text-md">Artist: Dang Vu Ha</p>
+        <div className="w-1/2 ml-5 text-left ">
+          <p className="text-5xl font-bold">{pictureArt?.name[language]}</p>
+          <div className="h-[1px] w-[100px] bg-white"></div>
+          <p className="mt-5 text-lg"><span className="mr-5 font-bold">ARTIST:</span>{pictureArt?.artist?.name[language]}</p>
+          <div className="w-full h-[0.5px] bg-gray-300"></div>
+          <p className="text-lg "><span className="mr-5 font-bold">MATERIAL:</span>{pictureArt?.materials?.name[language]}</p>
+          <div className="w-full h-[0.5px] bg-gray-300"></div>
+          <p className="text-lg "><span className="mr-5 font-bold">SIZE:</span>{pictureArt?.size} </p>
+          <div className="w-full h-[0.5px] bg-gray-300"></div>
+          <p className="mt-3 text-md">Artist:{pictureArt?.artist?.name[language]} </p>
           <p className="text-md">
-            Subjects: Bedroom Paintings & Artworks, Dining Room Paintings &
-            Artworks, Landscape Paintings, Living Room Paintings & Artworks, Oil
-            Landscape Paintings, Oil Paintings, Vertical Landscape Paintings
+            Subjects: {pictureArt?.category?.name[language]}
           </p>
         </div>
 

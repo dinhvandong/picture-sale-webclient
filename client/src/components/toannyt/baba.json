@@ -1,0 +1,49 @@
+[
+    {
+        "id":1,
+        "img":"https://www.nguyenartgallery.com/wp-content/uploads/Bach-Lien-Tri-XIII-90x180-1.jpg",
+        "text1":"TRINH QUE ANH",
+        "text2":"Highland Landscape",
+        "text3":"Trinh Que Anh",
+        "text4":"Lacquer on wood",
+        "text5":"110cm*110cm | 43.3 inches*43.3 inches"
+    },
+    
+    {
+        "id":2,
+        "img":"https://www.nguyenartgallery.com/wp-content/uploads/Mothers-Hometown-Vietnamese-Lacquer-Painting-by-Artist-Do-Khai.jpg",
+        "text1":"TRINH QUE ANH",
+        "text2":"Highland Landscape",
+        "text3":"Trinh Que Anh",
+        "text4":"Lacquer on wood",
+        "text5":"110cm*110cm | 43.3 inches*43.3 inches"
+    },
+    {
+        "id":3,
+        "img":"https://www.nguyenartgallery.com/wp-content/uploads/Bach-Lien-Tri-XI-80x140-1-1-2048x1153.jpg",
+        "text1":"TRINH QUE ANH",
+        "text2":"Highland Landscape",
+        "text3":"Trinh Que Anh",
+        "text4":"Lacquer on wood",
+        "text5":"110cm*110cm | 43.3 inches*43.3 inches"
+    },
+    {
+        "id":4,
+        "img":"https://www.nguyenartgallery.com/wp-content/uploads/Diem-Thuy-Von-Lien-Hoa-80x140-1.jpg",
+        "text1":"TRINH QUE ANH",
+        "text2":"Highland Landscape",
+        "text3":"Trinh Que Anh",
+        "text4":"Lacquer on wood",
+        "text5":"110cm*110cm | 43.3 inches*43.3 inches"
+    },
+    {
+        "id":5,
+        "img":"https://www.nguyenartgallery.com/wp-content/uploads/Bach-Hac-Lien-Mai-140x80-1.jpg",
+        "text1":"TRINH QUE ANH",
+        "text2":"Highland Landscape",
+        "text3":"Trinh Que Anh",
+        "text4":"Lacquer on wood",
+        "text5":"110cm*110cm | 43.3 inches*43.3 inches"
+    }
+
+]

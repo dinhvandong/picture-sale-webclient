@@ -43,13 +43,13 @@ const HomePage = () => {
       <Menu />
       <ImageSlider imageData={headerData?.items || []} />
       <Intro desc={headerData?.desc || ''} title={headerData?.name || ''} />
-      <Topic />
+      <Topic/>
       <ArtistCollection />
       <NewCollection />
       <VietnamPaitingCollection />
       <CustomerFeedback />
       <BlogCollection />
-      <Footer />
+      <Footer/>
     </div>
   );
 };

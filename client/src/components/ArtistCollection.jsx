@@ -40,7 +40,7 @@ const ArtistCollection = () => {
         {loading ? (
           <p className="text-center text-white">Loading...</p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {artists.map((artist) => (
               <ArtistItem
                 key={artist.id}

@@ -14,11 +14,12 @@ import Footer from '../components/Footer';
 import { AboutBody } from '../components/AboutBody';
 import GalleryTour from '../components/GalleryTour';
 import ArtistVn from '../components/ArtistVn';
-import Huy from '../components/huytq/Huy';import ToanTest from '../components/toannv/Test';
+import Huy from '../components/huytq/Huy';
+import ToanTest from '../components/toannv/Test';
 
 const PaintingPage = () => {
   return (
-    <div className='flex flex-col h-auto w-screen bg-white'>
+    <div className='flex flex-col w-screen h-auto bg-white'>
         <Header/>
         <Menu/>
         {/* <ImageSlider imageData={imagesData} /> */}

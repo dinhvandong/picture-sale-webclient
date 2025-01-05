@@ -3,8 +3,8 @@ import axios from 'axios';
 // export const ROOT_URL = "api.ambassadordaycruise.com";
 
 // export const ROOT_URL = "150.95.114.87:8081";
-export const ROOT_URL = "localhost:8081";
-
+export const ROOT_URL = "150.95.114.87:8081";
+//http://150.95.114.87:8081/
 // export const ROOT_URL = "api.globleartspace.com";
 export const API_URL_IMAGE = `http://${ROOT_URL}/api/images/`;
 
