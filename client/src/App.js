@@ -29,8 +29,8 @@ function App() {
           <Route path="/artwork/landscape-paintings" element={<PaintingPage />} />
           <Route path="/chat-with-our-art-collector" element={<DungTestPage />} />
           <Route path="/artist-vn/artist-lacquer-artwork" element={<LacquerArtworkPage />} />
-          <Route path="/paiting-detail" element={<PaintingDetailPage />} />
-          
+          <Route path="/picture-art-detail/:id" element={<PictureArtDetailPage />} />
+          <Route path="/special" element={<SpecialCollectionPage />} />
           {/* Uncomment or modify other routes as needed */}
         </Routes>
         {/* Add the floating WhatsApp button so it appears on all pages */}
