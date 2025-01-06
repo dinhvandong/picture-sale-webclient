@@ -3,13 +3,19 @@ import axios from 'axios';
 import NewItem from './NewItem';
 import { LanguageContext } from '../LanguageContext'; // Import LanguageContext
 import { findPictureTopicByKey } from '../services/api_header';
+import { API_URL_IMAGE } from '../services/api';
+import { useNavigate } from 'react-router-dom';
 
 const NewCollection = () => {
+  const navigate = useNavigate();
+
   const { language } = useContext(LanguageContext); // Get current language from context
   const [items, setItems] = useState([]); // State to store fetched items
   const [loading, setLoading] = useState(true); // State for loading
   const [error, setError] = useState(null); // State for error handling
 
+  const gotoSpecialArtCollection = (id) =>
+    navigate(`/picture-art-detail/${id}`);
   // useEffect(() => {
   //   // Fetch data from API
   //   axios
@@ -34,7 +40,7 @@ const NewCollection = () => {
     const fetchData = async () => {
       try {
         const response = await findPictureTopicByKey('new-collection');
-        if(response.success == 200){
+        if (response.success == 200) {
 
           console.log('response-new-collection:', response.data.items);
           setItems(response.data.items);
@@ -67,11 +73,15 @@ const NewCollection = () => {
       <div className="w-full h-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {items?.map((item) => (
-            <NewItem
-              key={item.id}
-              title={item.artist.name[language]} // Display title based on current language
-              image={item.thumb} // Display thumbnail
-            />
+
+            <div onClick={() => gotoSpecialArtCollection(item.id)}>
+              <NewItem
+                key={item.id}
+                title={item.artist.name[language]} // Display title based on current language
+                image={API_URL_IMAGE + item.thumb} // Display thumbnail
+              />
+            </div>
+
           ))}
         </div>
         <div className="flex items-center justify-center w-full mt-5">

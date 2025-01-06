@@ -52,18 +52,18 @@ const Menu = () => {
                 <div onClick={gotoArtistVnPage} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.artists[language]}</p>
                 </div>
-                <div onClick={gotoLacquerArtwork} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
+                {/* <div onClick={gotoLacquerArtwork} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.lacquerArtworks[language]}</p>
-                </div>
+                </div> */}
                 <div onClick={gotoSpecialArtCollection} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.specialCollections[language]}</p>
                 </div>
-                <div className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
+                {/* <div className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.commission[language]}</p>
-                </div>
-                <div onClick={gotoGalleryTourPage} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
+                </div> */}
+                {/* <div onClick={gotoGalleryTourPage} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.galleryTour[language]}</p>
-                </div>
+                </div> */}
                 <div onClick={gotoAboutPage} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.aboutUs[language]}</p>
                 </div>

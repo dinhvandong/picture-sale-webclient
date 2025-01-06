@@ -21,7 +21,7 @@ const QuanArtistVn = () => {
     }, []);
 
   return (
-      <div className='flex flex-col items-center justify-between w-full h-auto p-5 font-sans bg-[#27242E]'>
+      <div className='flex flex-col mt-[80px] items-center justify-between w-full h-auto p-5 font-sans bg-[#27242E]'>
           <div className='flex flex-col items-center justify-center w-full h-auto'>
 
               <p className='text-center text-[#FFEF96] font-semibold ml-5 mr-5 text-[27px]'>Famous Vietnamese Artists and Their Artwork at Nguyen Art Gallery

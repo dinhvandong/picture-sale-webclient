@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import ArtistItem from './ArtistItem';
 import { LanguageContext } from '../LanguageContext';
+import { getArtist } from '../services/api_artist';
+import { API_URL_IMAGE } from '../services/api';
 
 const ArtistCollection = () => {
   const [artists, setArtists] = useState([]);
@@ -12,9 +14,9 @@ const ArtistCollection = () => {
   useEffect(() => {
     const fetchArtists = async () => {
       try {
-        const response = await axios.post("http://localhost:8081/api/artist/findAll"); // Replace with your API endpoint
-        if (response.data.success === 200) {
-          setArtists(response.data.data);
+        const response = await getArtist()// Replace with your API endpoint
+        if (response.success === 200) {
+          setArtists(response.data);
         }
       } catch (error) {
         console.error("Error fetching artist data:", error);
@@ -45,7 +47,7 @@ const ArtistCollection = () => {
               <ArtistItem
                 key={artist.id}
                 title={artist.name[language]} // Pass the English name
-                image={artist.avatar} // Pass the avatar URL
+                image={API_URL_IMAGE + artist.avatar} // Pass the avatar URL
               />
             ))}
           </div>

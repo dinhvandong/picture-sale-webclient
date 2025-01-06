@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import GalleryTourPage from './pages/GalleryTourPage';
 import ArtistVnPage from './pages/ArtistVnPage';
@@ -8,24 +8,19 @@ import PaintingPage from './pages/PaintingPage';
 import DungTestPage from './pages/DungTestPage';
 import LacquerArtworkPage from './pages/LacquerArtwork';
 import PaintingDetailPage from './pages/PaintingDetailPage';
-import { useEffect } from 'react';
 import { LanguageProvider } from './LanguageContext';
-import Toan2 from './components/toan2/Toan2'; // Import LanguageProvider
 import AboutBody from './components/about-duc/AboutBody';
+import SpecialCollectionPage from './pages/SpecialCollectionPage';
+import PictureArtDetailPage from './pages/PictureArtDetailPage';
+import FloatingWhatsAppButton from './FloatingWhatsAppButton';
 
 function App() {
-  // useEffect(() => {
-  //   // Set default language in localStorage if not already set
-  //   if (!localStorage.getItem('language')) {
-  //     localStorage.setItem('language', 'vi'); // Default to Vietnamese
-  //   }
-  // }, []);
-
   return (
     <LanguageProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage/>} />
+          {/* homepage */}
+          <Route path="/homepage" element={<HomePage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutBody />} />
           <Route path="/gallery-tour" element={<GalleryTourPage />} />
@@ -34,10 +29,12 @@ function App() {
           <Route path="/artwork/landscape-paintings" element={<PaintingPage />} />
           <Route path="/chat-with-our-art-collector" element={<DungTestPage />} />
           <Route path="/artist-vn/artist-lacquer-artwork" element={<LacquerArtworkPage />} />
-          <Route path="/paiting-detail" element={<PaintingDetailPage />} />
-
+          <Route path="/picture-art-detail/:id" element={<PictureArtDetailPage />} />
+          <Route path="/special" element={<SpecialCollectionPage />} />
           {/* Uncomment or modify other routes as needed */}
         </Routes>
+        {/* Add the floating WhatsApp button so it appears on all pages */}
+        <FloatingWhatsAppButton />
       </BrowserRouter>
     </LanguageProvider>
   );
