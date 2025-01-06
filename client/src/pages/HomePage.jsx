@@ -38,7 +38,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-auto w-screen bg-white pt-[120px]"> {/* Adjust padding to account for both Header and Menu */}
+    <div className="flex flex-col h-auto w-screen bg-white"> {/* Adjust padding to account for both Header and Menu */}
       <Header />
       <Menu />
       <ImageSlider imageData={headerData?.items || []} />
@@ -55,3 +55,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+

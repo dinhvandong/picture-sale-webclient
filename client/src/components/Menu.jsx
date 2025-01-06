@@ -32,30 +32,30 @@ const Menu = () => {
 
 
     return (
-        <div className="bg-header_color w-full h-[60px] flex flex-row justify-center items-center fixed top-[60px] left-0 right-0 z-40">
+        <div className="bg-header_color w-full h-auto md:h-[60px] flex  flex-col md:flex-row justify-center items-center md:fixed  md:top-[60px] md:left-0 md:right-0 md:z-40">
             {/* Menu Items */}
-            <div className='flex flex-row'>
-                <div onClick={gotoHomePage} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
+            <div className='flex flex-col md:h-full md:flex-row w-full md:w-auto'>
+                <div onClick={gotoHomePage} className='flex md:items-center md:h-full w-full px-5  md:py-0 py-3 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.home[language]}</p>
                 </div>
 
 
 
                 
-                <div onClick={gotoPaintingPage} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
+                <div onClick={gotoPaintingPage} className='flex items-center h-full w-full px-5     md:py-0 py-3 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.paintings[language]}</p>
                 </div>
 
 
 
 
-                <div onClick={gotoArtistVnPage} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
+                <div onClick={gotoArtistVnPage} className='flex items-center h-full w-full px-5   md:py-0 py-3 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.artists[language]}</p>
                 </div>
                 {/* <div onClick={gotoLacquerArtwork} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.lacquerArtworks[language]}</p>
                 </div> */}
-                <div onClick={gotoSpecialArtCollection} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
+                <div onClick={gotoSpecialArtCollection} className='flex items-center h-full w-full px-5     md:py-0 py-3 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.specialCollections[language]}</p>
                 </div>
                 {/* <div className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
@@ -64,7 +64,7 @@ const Menu = () => {
                 {/* <div onClick={gotoGalleryTourPage} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.galleryTour[language]}</p>
                 </div> */}
-                <div onClick={gotoAboutPage} className='flex items-center h-full px-3 py-2 ml-5 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
+                <div onClick={gotoAboutPage} className='flex items-center h-full w-full px-5    md:py-0 py-3 text-black hover:text-white hover:bg-brown_color hover:cursor-pointer'>
                     <p className='font-bold'>{translations.aboutUs[language]}</p>
                 </div>
             </div>

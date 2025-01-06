@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
 
-        <div className="bg-bg_color w-full h-[60px] p-2 flex flex-col md:flex-row justify-between items-center fixed top-0 left-0 right-0 z-50">
+        <div className="bg-bg_color w-full h-auto md:h-[60px] p-2 flex flex-col md:flex-row justify-between items-center md:fixed md:top-0 md:left-0 md:right-0 z-50">
             <div className='flex flex-col md:flex-row items-center m-5'>
                 <div className='flex items-center m-5'>
                     <FaPhoneAlt className='text-white w-5 h-5' />
