@@ -35,7 +35,7 @@ function App() {
           <Route path="/chat-with-our-art-collector" element={<DungTestPage />} />
           <Route path="/artist-vn/artist-lacquer-artwork" element={<LacquerArtworkPage />} />
           <Route path="/paiting-detail" element={<PaintingDetailPage />} />
-
+          
           {/* Uncomment or modify other routes as needed */}
         </Routes>
       </BrowserRouter>
