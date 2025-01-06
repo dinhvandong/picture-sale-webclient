@@ -65,9 +65,43 @@ const VietnamPaitingCollection = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {items.map(item => (
 
-                        <div onClick={()=> gotoSpecialArtCollection(item.id)}>
-                            <VietnamPatingItem key={item.id} title={item.category.name[language]} image={API_URL_IMAGE +
-                                item.thumb} />
+                        <div onClick={() => gotoSpecialArtCollection(item.id)}>
+                            {/* <VietnamPatingItem key={item.id} title={item.category.name[language]} image={API_URL_IMAGE +
+                                item.thumb} /> */}
+                            <div
+                                key={item.id}
+                                className="flex flex-col items-center bg-[#27232E] hover:bg-[#222222] w-full transform hover:scale-[1.02] hover:shadow-lg transition-all duration-300"
+                            >
+                                <img
+                                    onClick={() => gotoSpecialArtCollection(item.id)}
+                                    src={API_URL_IMAGE + item.thumb}
+                                    alt={`img-${item.id}`}
+                                    className="object-cover w-full h-auto"
+                                />
+                                <p className="text-[13px] m-1 leading-none font-bold text-gray-400 mt-4">
+                                    {item.artist?.name[language]}
+                                </p>
+                                <p className="text-[15px] m-1 leading-none text-[#FFEF96]">
+                                    {item.name[language]}
+                                </p>
+                                <div className="w-full h-[30px] flex items-center flex-row border-b-[0.5px] border-gray-400">
+                                    <p className="text-[15px] font-bold text-white">ARTIST:</p>
+                                    <p className="text-[14px] text-white ml-16">{item.artist?.name[language]}</p>
+                                </div>
+                                <div className="w-full h-[30px] flex items-center flex-row border-b-[0.5px] border-gray-400">
+                                    <p className="text-[15px] font-bold text-white">MATERIAL:</p>
+                                    <p className="text-[14px] text-white ml-10">{item.materials?.name[language]}</p>
+                                </div>
+                                <div className="w-full h-[30px] flex items-center flex-row border-b-[0.5px] border-gray-400">
+                                    <p className="text-[15px] font-bold text-white">SUBJECT:</p>
+                                    <p className="text-[14px] text-white ml-10">{item.category.name[language]}</p>
+                                </div>
+                                <div className="w-full h-[30px] flex items-center border-b-[0.5px] border-gray-400">
+                                    <p className="text-[15px] flex flex-row font-bold text-white">
+                                        SIZE:<span className="ml-2 text-[14px] font-normal">{item.size}</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
 
