@@ -17,3 +17,17 @@ export const getArtist = async () => {
     }
   
   }
+  export const findArtistById = async (id) => {
+    try {
+      //const token = localStorage.getItem("token");
+      const response = await axios.get(`${API_URL}/artist/findById?id=${id}`, {
+        withCredentials: true,
+      });
+      
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+    
+  
+  }

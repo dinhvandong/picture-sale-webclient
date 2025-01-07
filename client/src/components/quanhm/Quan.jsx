@@ -41,7 +41,7 @@ const QuanArtistVn = () => {
 
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
                   {artistList.map(item => (
-                      <ArtistVnItem key={item.id} artwork={item.journey[language]} title={item.name[language]} image={API_URL_IMAGE + item.avatar} />
+                      <ArtistVnItem key={item.id} id={item.id} artwork={item.journey[language]} title={item.name[language]} image={API_URL_IMAGE + item.avatar} />
                   ))}
               </div>
 
