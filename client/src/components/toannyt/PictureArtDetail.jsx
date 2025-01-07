@@ -147,7 +147,7 @@ const PictureArtDetail = ({ idPicture }) => {
     return (
         <div className="w-full h-max bg-[#27232E] flex flex-col items-center">
             <div className="w-full h-[120px]"></div>
-            <div className="w-[60%] h-max flex flex-col">
+            <div className="w-full md:w-[60%] h-max flex flex-col">
                 {<PaitingDetail id={idPicture} onArtistIDRetrieved={handleArtistIDRetrieved} />}
 
                 <div className="w-full h-[50px] flex flex-row justify-between  items-center bg-[#27232E]">
@@ -158,7 +158,8 @@ const PictureArtDetail = ({ idPicture }) => {
 
                 <div
                     ref={scrollRef}
-                    className="grid grid-flow-col auto-cols-[50%] gap-4 overflow-hidden mt-3 cursor-grab"
+                    className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-3"
+                    // className="grid grid-flow-col  md:auto-cols-[50%] gap-4 overflow-hidden mt-3 cursor-grab"
                     onMouseDown={handleMouseDown}
                     onMouseMove={handleMouseMove}
                     onMouseUp={handleMouseUpOrLeave}
