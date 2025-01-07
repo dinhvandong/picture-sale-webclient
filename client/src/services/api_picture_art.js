@@ -83,7 +83,7 @@ export const getPictureArtist = async () => {
   export const findByArtistID = async (artistID) => {
     try {
         const response = await axios.get(`${API_URL}/pictureArt/findByArtistID?artistID=${artistID}`, {
-          
+          withCredentials: true,
         });
         return response.data; // Assuming the response contains the data you need
     } catch (error) {

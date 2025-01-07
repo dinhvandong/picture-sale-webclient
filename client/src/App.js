@@ -13,6 +13,7 @@ import AboutBody from './components/about-duc/AboutBody';
 import SpecialCollectionPage from './pages/SpecialCollectionPage';
 import PictureArtDetailPage from './pages/PictureArtDetailPage';
 import FloatingWhatsAppButton from './FloatingWhatsAppButton';
+import HuyArtistDetailPage from './pages/HuyArtistDetailPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/about" element={<AboutBody />} />
           <Route path="/gallery-tour" element={<GalleryTourPage />} />
           <Route path="/artist-vn" element={<ArtistVnPage />} />
+          <Route path="/artist-vn/Detail/:id" element={<HuyArtistDetailPage/>} />
           <Route path="/artist-vn/nguyen-van-huy" element={<HuyTqPage />} />
           <Route path="/artwork/landscape-paintings" element={<PaintingPage />} />
           <Route path="/chat-with-our-art-collector" element={<DungTestPage />} />
