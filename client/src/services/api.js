@@ -62,6 +62,31 @@ export const getUserById = async (id) => {
   }
 };
 
+
+// api.js
+
+export const fetchPictureArtByGroup = async (categoryID) => {
+  try {
+      const response = await fetch(`https://api.globleartspace.com/api/pictureArt/findAllPictureByGroup?categoryID=${categoryID}`, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+      });
+
+      if (!response.ok) {
+          throw new Error(`Error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return data;
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      throw error;
+  }
+};
+
+
 export const getUserFromToken = async (token) => {
   try {
     const token = localStorage.getItem("token");
