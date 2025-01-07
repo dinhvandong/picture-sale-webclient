@@ -46,11 +46,16 @@ const ArtworksUser = ({ language, artist, artistPicture, API_URL_IMAGE }) => {
       </div>
     })
   }
+  const translations = {
+    HighlightArtworks: { en: 'Highlight Artworks', vi: 'Tác Phẩm Nghệ thuật Nổi Bật' },
+    PaintingsofLotuses: { en: 'Paintings of Lotuses', vi: 'Tranh Hoa Sen' },
+   
+};
   return (
     <div className='Paintings-Architectures mt-10'>
       
-      <h1 className='text-center text-3xl text-[#ffef96] font-semibold mb-5'>Highlight Artworks of {artist.name[language]}</h1>
-      <h1 className='text-center text-3xl text-[#ffef96] font-semibold mt-5 mb-7'>Paintings of Lotuses</h1>
+      <h1 className='text-center text-3xl text-[#ffef96] font-semibold mb-5'>{translations.HighlightArtworks[language]} {artist.name[language]}</h1>
+      <h1 className='text-center text-3xl text-[#ffef96] font-semibold mt-5 mb-7'>{translations.PaintingsofLotuses[language]}</h1>
       <div className='grid grid-cols-3 gap-4'>
         {listArchitctures()}
 
