@@ -97,7 +97,7 @@ const HuyArtistDetail = () => {
                             <Catalogue />
                         )}
                         {activeTab === 'biography' && (
-                            <Biography API_URL_IMAGE={API_URL_IMAGE} artist={artist} />
+                            <Biography language={language} API_URL_IMAGE={API_URL_IMAGE} artist={artist} />
                         )}
                         {activeTab === 'message' && (
                             <MessagetoGalleryOwner />

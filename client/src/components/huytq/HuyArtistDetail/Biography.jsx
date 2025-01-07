@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from "react-router-dom";
-import axios from "axios";
+// import { useParams } from "react-router-dom";
+// import axios from "axios";
 
-import ArtworksUser from './ArtworksUser'
+// import ArtworksUser from './ArtworksUser'
 
-const Biography = ({ artist,API_URL_IMAGE}) => {
+const Biography = ({language, artist,API_URL_IMAGE}) => {
   
        
     return (
@@ -14,9 +14,9 @@ const Biography = ({ artist,API_URL_IMAGE}) => {
                 <img className='w-full' src={API_URL_IMAGE + artist.avatar} alt={artist.id} />
             </div>
             <div className='text-xl text-white w-3/5'>
-                <p>{artist.journey.en}</p>
-                <h1 className=' text-4xl text-[#e5ae0b] font-semibold mt-6 mb-4'>Exhibitions & Art Events</h1>
-                <ul className='list-disc ml-5'>
+                <p>{artist.journey[language]}</p>
+                {/* <h1 className=' text-4xl text-[#e5ae0b] font-semibold mt-6 mb-4'>Exhibitions & Art Events</h1> */}
+                {/* <ul className='list-disc ml-5'>
                     <li className='my-2'>
                     2019: Art exhibition "Father & Son" by artist Dau Quang Toan and his 2 sons
                     </li>
@@ -24,7 +24,7 @@ const Biography = ({ artist,API_URL_IMAGE}) => {
                     2021: Group exhibition "An & Hien" - Hide & Show
                     </li>
                     
-                </ul>
+                </ul> */}
             </div>
            
         </div>
