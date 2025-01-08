@@ -54,7 +54,7 @@ export const saveContact = async (contact) => {
  */
 export const deleteContact = async (id) => {
   try {
-    await axios.delete(`${ROOT_URL}/api/contacts/${id}`);
+    await axios.delete(`${BASE_URL}/api/contacts/${id}`);
     return { success: true };
   } catch (error) {
     console.error(`Error deleting contact with ID ${id}:`, error);
