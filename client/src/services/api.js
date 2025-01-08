@@ -65,9 +65,9 @@ export const getUserById = async (id) => {
 
 // api.js
 
-export const fetchPictureArtByGroup = async (categoryID) => {
+export const fetchPictureArtByGroup = async () => {
   try {
-      const response = await fetch(`https://api.globleartspace.com/api/pictureArt/findAllPictureByGroup?categoryID=${categoryID}`, {
+      const response = await fetch(`https://api.globleartspace.com/api/pictureArt/findAllPictureByGroup`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',

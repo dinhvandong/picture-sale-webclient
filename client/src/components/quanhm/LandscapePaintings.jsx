@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { findPictureTopicByKey } from "../../services/api_header";
 import { API_URL_IMAGE } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 // import Paintings from './Paintings.json';
 
 const LandscapePaintings = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,6 +24,8 @@ const LandscapePaintings = () => {
 
     fetchData();
   }, []);
+  const gotoSpecialArtCollection = (id) =>
+    navigate(`/picture-art-detail/${id}`);
 
 
 
@@ -31,9 +35,10 @@ const LandscapePaintings = () => {
         {data && data.map((item, index) => (
           <div key={item.id} className="flex justify-center items-center">
             <img
+             onClick={() => gotoSpecialArtCollection(item.id)}
               src={API_URL_IMAGE + item.thumb}
               alt={`Painting ${index}`}
-              className="h-full w-full object-cover"
+              className="h-full hover:cursor-pointer w-full object-cover"
             />
           </div>
         ))}

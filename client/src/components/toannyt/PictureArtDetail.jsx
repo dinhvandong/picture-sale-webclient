@@ -23,7 +23,11 @@ const PictureArtDetail = ({ idPicture }) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const vietsub = {
-        done: { vi: 'Đặt hàng thành công', en: 'Order successful' }
+        done: { vi: 'Đặt hàng thành công', en: 'Order successful' },
+        other_by_artist: {
+            vi: 'Các tác phẩm khác của họa sỹ ',
+            en:'Other works by the artist '
+        }
     }
     const [contact, setContact] = useState({
         name: '',
@@ -299,9 +303,9 @@ const PictureArtDetail = ({ idPicture }) => {
             <div className="w-full md:w-[60%] h-max flex flex-col">
                 {<PaitingDetail id={idPicture} onArtistIDRetrieved={handleArtistIDRetrieved} />}
 
-                <div className="w-full h-[50px] flex flex-row justify-between  items-center bg-[#27232E]">
+                <div className="w-full h-[50px] flex flex-row justify-between mt-[50px] mb-4 items-center bg-[#27232E]">
                     <div className='w-[100%] h-[1px] bg-gray-200'></div>
-                    <p className='text-[#E5AE0B] text-[25px] w-[700px] text-center font-bold'>{artistName ? artistName[language] : "Unknown Artist"}</p>
+                    <p className='text-[#E5AE0B] text-[25px] w-[700px] text-center font-bold'> {vietsub.other_by_artist[language]} {artistName ? artistName[language] : "Unknown Artist"}</p>
                     <div className='w-[100%] h-[1px] bg-gray-200'></div>
                 </div>
 
