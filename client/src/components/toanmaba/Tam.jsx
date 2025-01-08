@@ -82,6 +82,7 @@ const Tam = () => {
                                 <div className='w-full h-[30px] flex items-center flex-row border-b-[0.5px] border-gray-400'>
                                     <p className='text-[15px] font-bold text-white'>SIZE:</p>
                                     <p className='text-[14px] text-white ml-20'>{iten.size || 'N/A'}</p>
+                                  
                                 </div>
                             </div>
                         ))
