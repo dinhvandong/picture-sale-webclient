@@ -46,6 +46,7 @@ const ArtistCollection = () => {
             {artists.map((artist) => (
               <ArtistItem
                 key={artist.id}
+                id={artist.id}
                 title={artist.name[language]} // Pass the English name
                 image={API_URL_IMAGE + artist.avatar} // Pass the avatar URL
               />
