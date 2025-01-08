@@ -143,49 +143,8 @@ const ToanTest = () => {
         <p className='m-1 mt-10 leading-none text-white'>All artworks in Nguyen Art Gallery are authentic Vietnam paintings that pass through the strict testing process of materials, topics, and ideas of artists followed by certifications of</p>
         <p className='m-1 leading-none text-white'>original painting with the signature of authors. Hence, you can take it easy once ordering our original & high-quality paintings.</p>
         <p className=' text-white text-[20px] mt-16 font-bold'>CLASSIFICATIONS</p>
-        <div className='w-full h-[100px] flex justify-between items-center pr-16 pl-16 bg-[#27242E]'>
-          <span className="relative text-[18px] inline-block font-bold cursor-pointer text-white after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-slate-400 after:transition-all after:duration-300 hover:after:w-full">All Landscape Paintings</span>
-          <span className="relative text-[18px] inline-block font-bold cursor-pointer text-white after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-slate-400 after:transition-all after:duration-300 hover:after:w-full">Oil Paintings</span>
-          <span className="relative text-[18px] inline-block font-bold cursor-pointer text-white after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-slate-400 after:transition-all after:duration-300 hover:after:w-full">Lacquer Paintings</span>
-          <span className="relative text-[18px] inline-block font-bold cursor-pointer text-white after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-slate-400 after:transition-all after:duration-300 hover:after:w-full">Acrylic Paintings</span>
-          <span className="relative text-[18px] inline-block font-bold cursor-pointer text-white after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-slate-400 after:transition-all after:duration-300 hover:after:w-full">Horizontal Paintings</span>
-          <span className="relative text-[18px] inline-block font-bold cursor-pointer text-white after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-slate-400 after:transition-all after:duration-300 hover:after:w-full">Vertical Paintings</span>
-          <span className="relative text-[18px] inline-block font-bold cursor-pointer text-white after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-slate-400 after:transition-all after:duration-300 hover:after:w-full">Square Paintings</span>
-        </div>
       </div>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 w-full p-3 gap-4 bg-[#27242E]'>
-        {Toan.map((item) => (
-          <div
-            key={item.id}
-            className='flex flex-col items-center bg-[#27242E] hover:bg-[#222222] max-w-fit mx-auto 
-                 transform hover:scale-[1.02] hover:shadow-lg transition-all duration-300'
-          >
-            <img
-              src={item.img}
-              alt={`img-${item.id}`}
-              className="object-cover w-full h-auto"
-            />
-            <p className='text-[13px] m-1 leading-none font-bold text-gray-400 mt-4'>{item.text1}</p>
-            <p className='text-[15px] m-1 leading-none text-[#FFEF96]'>{item.text2}</p>
-
-            <div className='w-full h-[30px] flex items-center flex-row border-b-[0.5px] border-gray-400'>
-              <p className='text-[15px] font-bold text-white'>ARTIST:</p>
-              <p className='text-[14px] text-white ml-16'>{item.text3}</p>
-            </div>
-
-            <div className='w-full h-[30px] flex items-center flex-row border-b-[0.5px] border-gray-400'>
-              <p className='text-[15px] font-bold text-white'>MATERIAL:</p>
-              <p className='text-[14px] text-white ml-10'>{item.text4}</p>
-            </div>
-
-            <div className='w-full h-[30px] flex items-center flex-row border-b-[0.5px] border-gray-400'>
-              <p className='text-[15px] font-bold text-white'>SIZE:</p>
-              <p className='text-[14px] text-white ml-20'>{item.text5}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
+      
 
     </div>
   )

@@ -15,6 +15,7 @@ import GalleryTour from '../components/GalleryTour';
 import ArtistVn from '../components/ArtistVn';
 import Huy from '../components/huytq/Huy';
 import ToanTest from '../components/toannv/Test';
+import ToanTam from '../components/toanmaba/Tam';
 
 const PaintingPage = () => {
   return (
@@ -23,6 +24,7 @@ const PaintingPage = () => {
         <Menu/>
         {/* <ImageSlider imageData={imagesData} /> */}
         <ToanTest/>
+        <ToanTam/>
         <Footer/>
     </div>
   )
