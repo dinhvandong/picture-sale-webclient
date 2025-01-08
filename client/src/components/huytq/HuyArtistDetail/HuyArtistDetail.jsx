@@ -80,7 +80,7 @@ const HuyArtistDetail = () => {
                         >
                             Biography
                         </button>
-                        <button
+                        {/* <button
                             onClick={() => setActiveTab('message')}
                             className={`py-2 px-4 rounded-full ${activeTab === 'message'
                                 ? 'border-2 border-white text-white font-bold text-2xl transition  duration-300'
@@ -88,7 +88,7 @@ const HuyArtistDetail = () => {
                                 }`}
                         >
                             Message to Gallery Owner
-                        </button>
+                        </button> */}
                     </div>
 
                     {/* Nội dung các tab */}
@@ -99,9 +99,9 @@ const HuyArtistDetail = () => {
                         {activeTab === 'biography' && (
                             <Biography language={language} API_URL_IMAGE={API_URL_IMAGE} artist={artist} />
                         )}
-                        {activeTab === 'message' && (
+                        {/* {activeTab === 'message' && (
                             <MessagetoGalleryOwner />
-                        )}
+                        )} */}
                     </div>
                 </div>
             </div>
