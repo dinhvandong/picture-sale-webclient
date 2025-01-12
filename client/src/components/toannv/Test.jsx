@@ -6,7 +6,7 @@ import { LanguageContext } from '../../LanguageContext';
 const ToanTest = () => {
   // const [language, setLanguage] = useState('en');
 
-    const { language, changeLanguage } = useContext(LanguageContext);
+  const { language, changeLanguage } = useContext(LanguageContext);
 
 
 
@@ -14,7 +14,7 @@ const ToanTest = () => {
   //   setLanguage(lang);
   // };
 
-  
+
 
   const content = {
     en: {
@@ -41,6 +41,13 @@ const ToanTest = () => {
           'It is no doubt that your living space will brighten up and be more stunning than it has ever been.',
         ],
       },
+      footer: {
+        text1:
+          'All artworks in Nguyen Art Gallery are authentic Vietnam paintings that pass through the strict testing process of materials, topics, and ideas of artists followed by certifications of',
+        text2:
+          'original painting with the signature of authors. Hence, you can take it easy once ordering our original & high-quality paintings.',
+        title: 'CLASSIFICATIONS',
+      },
     },
     vi: {
       title: 'Tranh Phong Cảnh | | Bộ Sưu Tập Xuất Sắc Về Tranh Phong Cảnh Của Các Họa Sĩ Nổi Tiếng Việt Nam',
@@ -66,14 +73,22 @@ const ToanTest = () => {
           'Không nghi ngờ gì nữa, không gian sống của bạn sẽ trở nên rực rỡ và tuyệt đẹp hơn bao giờ hết.',
         ],
       },
+      footer: {
+        text1:
+          'Tất cả các tác phẩm nghệ thuật tại Nguyen Art Gallery đều là tranh Việt Nam chính gốc, đã trải qua quy trình kiểm tra nghiêm ngặt về chất liệu, chủ đề và ý tưởng của các họa sĩ, kèm theo chứng nhận',
+        text2:
+          'tranh gốc với chữ ký của tác giả. Vì vậy, bạn hoàn toàn có thể yên tâm khi đặt mua tranh gốc & chất lượng cao của chúng tôi.',
+        title: 'PHÂN LOẠI',
+      },
     },
   };
 
 
+
   return (
     <div className="flex flex-col w-full h-max">
-      <div className="w-full h-[120px]"></div>
-      <LandscapePaintings/>
+      <div className="w-full md:h-[120px]"></div>
+      <LandscapePaintings />
       {/* <div className="w-full h-[800px] bg-cover bg-[url(https://www.nguyenartgallery.com/wp-content/uploads/Vietnamese-Paintings-Artists-1-2048x1024.jpg)]"></div> */}
       {/* Language Toggle */}
       {/* <div className="flex justify-end p-4">
@@ -93,42 +108,58 @@ const ToanTest = () => {
 
       {/* Content */}
       <div className="flex flex-col items-center w-full h-max bg-[#27242E]">
-        <p className="text-[#FFEF96] mt-4 font-bold text-[30px]">{content[language].title}</p>
-        <p className="m-1 leading-none text-white">{content[language].description1}</p>
-        <p className="m-1 leading-none text-white">{content[language].description2}</p>
-        <p className="m-1 leading-none text-white">{content[language].description3}</p>
-        <div className="flex flex-col w-[65%] h-[800px] bg-[#27242E]">
-          <div className="flex flex-row w-full mt-5 h-1/2">
-            <div className="flex items-center justify-center w-1/2 h-full p-3">
-              <div className="w-full h-[70%] flex flex-col">
-                <div className="w-full h-[20%] flex flex-col items-center justify-center">
-                  <span className="text-[#FFEF96] m-1 leading-none font-bold text-[25px]">
+        {/* Title */}
+        <p className="text-[#FFEF96] mt-4 font-bold text-[20px] md:text-[30px] text-center">
+          {content[language].title}
+        </p>
+
+        {/* Descriptions */}
+        <p className="m-1 leading-none text-white text-sm md:text-base text-center">
+          {content[language].description1}
+        </p>
+        <p className="m-1 leading-none text-white text-sm md:text-base text-center">
+          {content[language].description2}
+        </p>
+        <p className="m-1 leading-none text-white text-sm md:text-base text-center">
+          {content[language].description3}
+        </p>
+
+        {/* Content Section */}
+        <div className="flex flex-col w-full md:w-[65%] h-auto md:h-[800px] bg-[#27242E]">
+          {/* First Section */}
+          <div className="flex flex-col md:flex-row w-full mt-5 h-auto md:h-1/2">
+            <div className="flex items-center justify-center w-full md:w-1/2 h-auto md:h-full p-3">
+              <div className="w-full h-auto flex flex-col">
+                <div className="w-full h-auto flex flex-col items-center justify-center">
+                  <span className="text-[#FFEF96] m-1 leading-none font-bold text-[18px] md:text-[25px] text-center">
                     {content[language].section1.title}
                   </span>
                 </div>
-                <div className="w-full h-[80%] mt-4 flex flex-col justify-center">
+                <div className="w-full h-auto mt-4 flex flex-col justify-center">
                   {content[language].section1.text.map((text, index) => (
-                    <p key={index} className="m-1 font-bold leading-none text-white">
+                    <p key={index} className="m-1 font-bold leading-none text-white text-sm text-center">
                       {text}
                     </p>
                   ))}
                 </div>
               </div>
             </div>
-            <div className="flex w-1/2 h-full bg-cover bg-[url(https://www.nguyenartgallery.com/wp-content/uploads/bedroom-with-landscape-paintings-by-famous-artirsts.jpg)]"></div>
+            <div className="flex w-full md:w-1/2 h-[500px] md:h-full bg-cover bg-[url(https://www.nguyenartgallery.com/wp-content/uploads/bedroom-with-landscape-paintings-by-famous-artirsts.jpg)]"></div>
           </div>
-          <div className="flex flex-row w-full h-1/2">
-            <div className="flex w-1/2 h-full bg-cover bg-[url(https://www.nguyenartgallery.com/wp-content/uploads/living-room-with-landscape-paintings.jpg)]"></div>
-            <div className="flex items-center justify-center w-1/2 h-full p-3">
-              <div className="w-full h-[70%] flex flex-col">
-                <div className="w-full h-[20%] flex flex-col items-center justify-center">
-                  <span className="text-[#FFEF96] m-1 leading-none font-bold text-[25px]">
+
+          {/* Second Section */}
+          <div className="flex flex-col md:flex-row w-full h-auto md:h-1/2">
+            <div className="flex w-full md:w-1/2 h-[500px] md:h-full bg-cover bg-[url(https://www.nguyenartgallery.com/wp-content/uploads/living-room-with-landscape-paintings.jpg)]"></div>
+            <div className="flex items-center justify-center w-full md:w-1/2 h-auto md:h-full p-3">
+              <div className="w-full h-auto flex flex-col">
+                <div className="w-full h-auto flex flex-col items-center justify-center">
+                  <span className="text-[#FFEF96] m-1 leading-none font-bold text-[18px] md:text-[25px] text-center">
                     {content[language].section2.title}
                   </span>
                 </div>
-                <div className="w-full h-[80%] mt-4 flex flex-col justify-center">
+                <div className="w-full h-auto mt-4 flex flex-col justify-center">
                   {content[language].section2.text.map((text, index) => (
-                    <p key={index} className="m-1 font-bold leading-none text-white">
+                    <p key={index} className="m-1 font-bold leading-none text-white text-sm text-center">
                       {text}
                     </p>
                   ))}
@@ -137,14 +168,25 @@ const ToanTest = () => {
             </div>
           </div>
         </div>
-      
 
+        {/* Footer Text */}
+        <div className="flex flex-col items-center mt-10 space-y-2">
+          <p className="text-white text-sm text-center md:text-base leading-snug px-4">
+            {content[language].footer.text1}
+          </p>
+          <p className="text-white text-sm text-center md:text-base leading-snug px-4">
+            {content[language].footer.text2}
+          </p>
+        </div>
 
-        <p className='m-1 mt-10 leading-none text-white'>All artworks in Nguyen Art Gallery are authentic Vietnam paintings that pass through the strict testing process of materials, topics, and ideas of artists followed by certifications of</p>
-        <p className='m-1 leading-none text-white'>original painting with the signature of authors. Hence, you can take it easy once ordering our original & high-quality paintings.</p>
-        <p className=' text-white text-[20px] mt-16 font-bold'>CLASSIFICATIONS</p>
+        {/* Classification Title */}
+        <p className="text-white text-[16px] md:text-[20px] mt-16 font-bold text-center">
+          {content[language].footer.title}
+        </p>
+
       </div>
-      
+
+
 
     </div>
   )

@@ -31,7 +31,7 @@ const LandscapePaintings = () => {
 
   return (
     <div className="p-1 bg-gray-100 h-auto">
-      <div className="grid grid-cols-3 gap-1 h-full">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-1 h-full">
         {data && data.map((item, index) => (
           <div key={item.id} className="flex justify-center items-center">
             <img
