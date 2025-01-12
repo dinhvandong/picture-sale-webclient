@@ -3,17 +3,30 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLocation } from "react-icons/io5";
 import { SiWelcometothejungle } from "react-icons/si";
-import vietnam from '../assets/vietnam_flag.png';
-import american from '../assets/usa_flag.png';
 import { LanguageContext } from '../LanguageContext';
 
 const Header = () => {
-    // State to hold the current language
-    // const [language, setLanguage] = useState('vi');
     const { language, changeLanguage } = useContext(LanguageContext);
+    const [greeting, setGreeting] = useState('');
+
+    // Function to determine greeting based on time
+    const updateGreeting = () => {
+        const hour = new Date().getHours();
+        if (hour < 12) {
+            setGreeting(language === 'en' ? 'Good morning' : 'Chào buổi sáng');
+        } else if (hour < 18) {
+            setGreeting(language === 'en' ? 'Good afternoon' : 'Chào buổi chiều');
+        } else {
+            setGreeting(language === 'en' ? 'Good evening' : 'Chào buổi tối');
+        }
+    };
+
+    // Update greeting when component mounts or language changes
+    useEffect(() => {
+        updateGreeting();
+    }, [language]);
 
     return (
-
         <div className="bg-bg_color w-full h-auto md:h-[60px] p-2 flex flex-col md:flex-row justify-between items-center md:fixed md:top-0 md:left-0 md:right-0 z-50">
             <div className='flex flex-col md:flex-row items-center m-5'>
                 <div className='flex items-center m-5'>
@@ -46,12 +59,9 @@ const Header = () => {
                 </button>
             </div>
 
-
             <div className='flex items-center m-5'>
                 <SiWelcometothejungle className='text-white w-5 h-5' />
-                <p className='ml-2 text-yellow-500 font-mono'>
-                    {language === 'en' ? 'Good morning' : 'Chào buổi sáng'}
-                </p>
+                <p className='ml-2 text-yellow-500 font-mono'>{greeting}</p>
             </div>
         </div>
     );
