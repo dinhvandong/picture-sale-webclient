@@ -42,12 +42,12 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-       
+
 //         const pictureArtResponse = await findPictureArtById(id);
 //         if (pictureArtResponse.success === 200) {
 //           const fetchedData = pictureArtResponse.data;
 //           console.log('fetchedData',fetchedData);
-          
+
 //           setPictureArt(fetchedData);
 
 //            // Invoke callback with artistID
@@ -67,15 +67,15 @@
 
 //   return (
 //     <div className="bg-[#27242D] w-full md:w-full text-white flex flex-col md:flex-row  justify-center space-y-4 md:space-y-0 md:space-x-10">
-   
+
 
 //       <div className="flex flex-col w-full mt-3 md:flex-row">
 
-      
+
 //         <div
 //           ref={imageContainerRef}
 //           className="relative w-full md:w-[50%] h-auto overflow-hidden border-2 border-gray-300"
-       
+
 //         >
 //           <img
 //             src={API_URL_IMAGE + pictureArt.thumb}
@@ -138,6 +138,7 @@ import { FaSearchPlus, FaSearchMinus, FaExpand } from "react-icons/fa";
 import { findPictureArtById } from "../services/api_picture_art";
 import { API_URL_IMAGE } from "../services/api";
 import { LanguageContext } from "../LanguageContext";
+import PayPalButtonComponent from "./PayPalButtonComponent";
 
 function PaitingDetail({ id, onArtistIDRetrieved }) {
   const { language } = useContext(LanguageContext);
@@ -152,6 +153,11 @@ function PaitingDetail({ id, onArtistIDRetrieved }) {
     setScale((prevScale) => (prevScale > 1.2 ? prevScale - 0.2 : 1)); // Zoom out with a minimum of 1
   };
 
+
+  const vietsub = {
+    pay_with_paypal: { vi: 'Thanh toán sử dụng Paypal', en: 'Pay with PayPal' },
+  
+}
   const handleFullScreen = () => {
     const elem = imageContainerRef.current; // Get the current container element
     if (elem.requestFullscreen) {
@@ -232,7 +238,7 @@ function PaitingDetail({ id, onArtistIDRetrieved }) {
             </button>
           </div>
         </div>
-        <div className="w-1/2 ml-5 text-left">
+        <div className="w-full md:w-1/2 ml-5 text-left">
           <p className="text-5xl font-bold">{pictureArt?.name[language]}</p>
           <div className="h-[1px] w-[100px] bg-white"></div>
           <p className="mt-5 text-lg">
@@ -256,7 +262,10 @@ function PaitingDetail({ id, onArtistIDRetrieved }) {
           <p className="text-md">
             Subjects: {pictureArt?.category?.name[language]}
           </p>
+          <h1 className="text-4xl font-bold py-8">{vietsub.pay_with_paypal[language]}</h1>
+          <PayPalButtonComponent ammount={50.0} />
         </div>
+
       </div>
     </div>
   );
